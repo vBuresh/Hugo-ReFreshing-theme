@@ -5,10 +5,10 @@
 themes/
 assets/bootstrap/
 content/
-# static/
 @_site/
 wREADME.md
 # _ex.*
 # lay_dev/
 media/
 vendor/
+exampleSite/
