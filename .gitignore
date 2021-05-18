@@ -8,7 +8,7 @@ content/
 static/
 @_site/
 wREADME.md
-_ex.*
-lay_dev/
+# _ex.*
+# lay_dev/
 media/
 vendor/
