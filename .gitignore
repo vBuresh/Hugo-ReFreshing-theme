@@ -5,7 +5,7 @@
 themes/
 assets/bootstrap/
 content/
-static/
+# static/
 @_site/
 wREADME.md
 # _ex.*
