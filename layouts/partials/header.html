@@ -1,0 +1,28 @@
+<header class="mb-auto">
+  <div>
+    <h3 class="float-md-start mb-0">
+      <a class="btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+  <svg id="w-list-nested-bi" width="1.5em" height="1.5em" fill="{{ .Site.Params.mainColour }}" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z" />
+  </svg>
+</a>
+    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 300 300">
+      <path fill="{{ .Site.Params.mainColour }}" d="M5 5.1h132v291.5H5z"/>
+      <rect height="140.7" width="132" ry="15" rx="15" y="156" x="163" fill="{{ .Site.Params.mainColour }}"/>
+      <ellipse ry="68.482" rx="64" cy="73.482" cx="228" fill="#d1001f"/>
+    </svg>
+      <!-- cyberMiR -->
+    </h3>
+    <nav class="nav nav-masthead justify-content-center float-md-end">
+
+      <a style="color: {{ .Site.Params.mainColour }}" class="nav-link active" aria-current="page" href="#">Home</a>
+      <a style="color: {{ .Site.Params.mainColour }}" class="nav-link" href="#">Features</a>
+      <a style="color: {{ .Site.Params.mainColour }}" class="nav-link" href="#">Contact</a>
+
+      <!-- Params.navbar -->
+      {{/* {{- if eq .Site.Params.navbarLayouts true -}}
+      {{ partial "navbar.taxsonomy.html" . }}
+      {{- end -}} */}}
+    </nav>
+  </div>
+</header>

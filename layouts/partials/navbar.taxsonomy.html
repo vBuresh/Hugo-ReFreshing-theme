@@ -1,0 +1,34 @@
+
+      {{ range .Site.RegularPages }}
+      {{- if eq .Params.showInMenu true -}}
+      <a style="color: {{ .Site.Params.mainColour }}" class="nav-link" href="{{- .Permalink | relURL -}}">
+        {{- .Title -}}
+      </a>
+      {{- end -}}
+      {{- end -}}
+      {{- range .Site.Sections -}}
+      {{- if not (eq .Title "singles") -}}
+      {{- $secCount := len .Sections -}}
+      {{- if (ne $secCount 0) }}
+>
+      <a style="color: {{ .Site.Params.mainColour }}" class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{- .Title -}}
+      </a>
+
+      <div class="navbar-dropdown dropdown-menu" aria-labelledby="navbarDropdown">
+        {{- range .Sections -}}
+        <a style="color: {{ .Site.Params.mainColour }}" class="nav-link dropdown-item"
+          href="{{- .Permalink | relURL -}}">
+          {{- .Title -}}
+        </a>
+        {{- end -}}
+      </div>
+
+    {{- else -}}
+      <a style="color: {{ .Site.Params.mainColour }}" class="nav-link dropdown-item" href="{{- .Permalink | relURL -}}">
+        {{- .Title -}}
+      </a>
+      {{- end -}}
+      {{- end -}}
+      {{- end -}}
