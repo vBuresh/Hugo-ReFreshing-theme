@@ -4,10 +4,11 @@
 *.scss.map
 themes/
 assets/bootstrap/
-# _ex.*
-# lay_dev/
-media/
-vendor/
+assets/js
+assets/images
+assets/css
+
+wMedia/
 exampleSite/
 
 # Вспомогательные файлы
