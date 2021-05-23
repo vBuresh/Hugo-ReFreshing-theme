@@ -1,0 +1,42 @@
+// homepage <section class="rfi-homepage">
+
+.rfi-homepage {
+  background-color: $darkbody;
+  color: $rfilightest;
+
+  .rfi-body {
+    padding-bottom: 120px;
+    padding-top: 220px;
+  }
+
+  .rfi-homepage-title {
+    font-family: 'Playfair Display';
+    font-size: 5rem;
+    font-style: italic;
+  }
+
+  .rfi-homepage-subtitle {
+    color: $gray-600; // ^v^ muted
+    font-family: 'Playfair Display';
+  }
+
+  .homepage-card {
+
+    .card {
+      background-color: transparent;
+      border: 0;
+  }
+}
+
+  .homepage-summary {
+    background-color: transparent;
+    border: 0;
+    // font-style: italic;
+    max-width: 34.5rem;
+
+    a {
+      color: $refreshing;
+      text-decoration: none;
+    }
+  }
+}

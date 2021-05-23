@@ -1,0 +1,88 @@
+// duplicate css from ponomar.net
+// Web Font CSS declaration for Church Slavonic fonts
+// Slavonic Computing Initiative (https://sci.ponomar.net/)
+// Cathisma Fedorovsk Indiction Menaion Monomakh Oglavie Pomorsky Ponomar Vertograd
+
+@font-face {
+  font-family: 'Acathist';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Acathist-Regular.eot'), url('../fonts/Acathist-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Acathist-Regular.woff2') format('woff2'), url('../fonts/Acathist-Regular.woff') format('woff'), url('../fonts/Acathist-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Cathisma Unicode';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/CathismaUnicode.eot'), url('../fonts/CathismaUnicode.eot?#iefix') format('embedded-opentype'), url('../fonts/CathismaUnicode.woff2') format('woff2'), url('../fonts/CathismaUnicode.woff') format('woff'), url('../fonts/CathismaUnicode.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Fedorovsk Unicode';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/FedorovskUnicode.eot'), url('../fonts/FedorovskUnicode.eot?#iefix') format('embedded-opentype'), url('../fonts/FedorovskUnicode.woff2') format('woff2'), url('../fonts/FedorovskUnicode.woff') format('woff'), url('../fonts/FedorovskUnicode.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Indiction Unicode';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/IndictionUnicode.eot'), url('../fonts/IndictionUnicode.eot?#iefix') format('embedded-opentype'), url('../fonts/IndictionUnicode.woff2') format('woff2'), url('../fonts/IndictionUnicode.woff') format('woff'), url('../fonts/IndictionUnicode.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Menaion Unicode';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/MenaionUnicode.eot'), url('../fonts/MenaionUnicode.eot?#iefix') format('embedded-opentype'), url('../fonts/MenaionUnicode.woff2') format('woff2'), url('../fonts/MenaionUnicode.woff') format('woff'), url('../fonts/MenaionUnicode.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Monomakh Unicode';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/MonomakhUnicode.eot'), url('../fonts/MonomakhUnicode.eot?#iefix') format('embedded-opentype'), url('../fonts/MonomakhUnicode.woff2') format('woff2'), url('../fonts/MonomakhUnicode.woff') format('woff'), url('../fonts/MonomakhUnicode.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Oglavie Unicode';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/OglavieUnicode.eot'), url('../fonts/OglavieUnicode.eot?#iefix') format('embedded-opentype'), url('../fonts/OglavieUnicode.woff2') format('woff2'), url('../fonts/OglavieUnicode.woff') format('woff'), url('../fonts/OglavieUnicode.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Pochaevsk Unicode';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/PochaevskUnicode.eot'), url('../fonts/PochaevskUnicode.eot?#iefix') format('embedded-opentype'), ('../fonts/PochaevskUnicode.woff2') format('woff2'), ('../fonts/PochaevskUnicode.woff') format('woff'), ('../fonts/PochaevskUnicode.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Pomorsky Unicode';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/PomorskyUnicode.eot'), url('../fonts/PomorskyUnicode.eot?#iefix') format('embedded-opentype'), url('../fonts/PomorskyUnicode.woff2') format('woff2'), url('../fonts/PomorskyUnicode.woff') format('woff'), url('../fonts/PomorskyUnicode.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ponomar Unicode';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/PonomarUnicode.eot'), url('../fonts/PonomarUnicode.eot?#iefix') format('embedded-opentype'), url('../fonts/PonomarUnicode.woff2') format('woff2'), url('../fonts/PonomarUnicode.woff') format('woff'), url('../fonts/PonomarUnicode.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Triodion Unicode';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/TriodionUnicode.eot'), url('../fonts/TriodionUnicode.eot?#iefix') format('embedded-opentype'), url('../fonts/TriodionUnicode.woff2') format('woff2'), url('../fonts/TriodionUnicode.woff') format('woff'), url('../fonts/TriodionUnicode.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Shafarik';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Shafarik-Normal.eot'), url('../fonts/Shafarik-Normal.eot?#iefix') format('embedded-opentype'), url('../fonts/Shafarik-Normal.woff2') format('woff2'), url('../fonts/Shafarik-Normal.woff') format('woff'), url('../fonts/Shafarik-Normal.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Vertograd Unicode';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/VertogradUnicode.eot') url('../fonts/VertogradUnicode.eot?#iefix') format('embedded-opentype'), url('../fonts/VertogradUnicode.woff2') format('woff2'), url('../fonts/VertogradUnicode.woff') format('woff'), url('../fonts/VertogradUnicode.ttf') format('truetype');
+}

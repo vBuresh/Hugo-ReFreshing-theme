@@ -1,0 +1,75 @@
+$font-family-sans-serif: 'Fira Sans';
+$cukinovar: #bf2e09;
+$primacolor: #00d1b2; //Strong cyan
+$primacolor-bright: #1fffde; // lighten(saturate($primacolor, 5%), 15%);
+$primacolor-light: lighten(saturate($primacolor, 5%), 45%);
+$wbright:   #d1fff8; // Very pale cyan
+$brightest: #ebfffc; // Very pale (mostly white) cyan
+$leadcolor: #e0f2f1; // Light grayish cyan.
+$wlight:    #f2faf9; // Light grayish cyan.
+// TODO $brightest, $leadcolor и $wlight одинаковыe оставить один
+$primasecond: #007575;
+$prima-next: #133737;
+$primacolor-dark: #008571; // rgb(0,133,113) color description : Dark cyan
+//Monochromatic Colors
+// color: #009e87 - rgb(0,158,135)
+// color: #00b89c - rgb(0,184,156)
+// color: #00d1b2 - rgb(0,209,178)
+// color: #00ebc8 - rgb(0,235,200)
+// color: #05ffda - rgb(5,255,218)
+// color: #1fffde - rgb(31,255,222)
+$primalink: #0088d1; // Analogous color: Strong blue.
+// #00d14a Analogous color: Strong cyan - lime green..
+// #d1001f Complementary color: Strong red.
+// #d1b200 Triadic Color: Strong yellow. // #F39200
+// #b200d1 Triadic Color: Strong magenta
+$darkbg: #0a1922; // navbar, footer, card darkmode-bg //Hugo - основной
+$wdark: #343a40;
+$wdarkborder: #0e2426; //Gimp
+$footer-bg: #070707;
+// #040b0e Very dark (mostly black) blue
+// color: $gray-600; // muted
+
+//vv dark colors
+// config yaml mainColour: "#00D1B2" #00a650
+// $body-bg: #000;
+// $body-color: #111;
+// bootstrap style
+// body {color: #212529;} Very dark (mostly black) blue
+// .bg-dark {background-color: #343a40;} Very dark grayish blue
+// Very dark (mostly black) cyan:
+// background-color: #0A1922  //Hugo - основной
+// background-color: #0E2426: //Gimp
+// background-color: #002727;
+// background-color: #002525
+// background-color: #133737;
+// background-color: #007575;
+// background-color: #272822; monokai Syntax Highlighter CSS: Very dark (mostly black) yellow [Olive tone].
+
+// $sidebar-collapse-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><path fill='none' stroke='rgba(0,0,0,.5)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/></svg>");
+
+//////////////////////////////
+// bulma defoult colors
+$bu-orange:    #ff470f // hsl(14,  100%, 53%)
+$bu-yellow:    #ffdd57 // hsl(48,  100%, 67%)
+$bu-green:     #48c774 // hsl(141, 53%,  53%)
+$bu-turquoise: #00d1b2 // hsl(171, 100%, 41%)
+$bu-cyan:      #3298dc // hsl(204, 71%,  53%)
+$bu-blue:      #3273dc // hsl(217, 71%,  53%)
+$bu-purple:    #b86bff // hsl(271, 100%, 71%)
+$bu-red:       #f14668 // hsl(348, 86%, 61%)
+
+
+/////////////////////////////
+
+// Local docs variables
+// $bd-purple:        #563d7c;
+// $bd-purple-bright: lighten(saturate($bd-purple, 5%), 15%);
+// $bd-purple-light:  lighten(saturate($bd-purple, 5%), 45%);
+// $bd-dark:          #2a2730;
+// $bd-download:      #ffe484;
+// $bd-info:          #5bc0de;
+// $bd-warning:       #f0ad4e;
+// $bd-danger:        #d9534f;
+// $dropdown-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path fill='#292b2c' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>");
+// $sidebar-collapse-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><path fill='none' stroke='rgba(0,0,0,.5)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/></svg>");

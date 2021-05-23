@@ -1,0 +1,18 @@
+// font-resizer
+//////////////////////////
+
+html {
+  font-size: 100%;
+}
+
+span .resizer {
+  cursor: pointer;
+}
+
+.js-font-decrease {
+  font-size: 75%;
+}
+
+.js-font-increase {
+  font-size: 125%;
+}
