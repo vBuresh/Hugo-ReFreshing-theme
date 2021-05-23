@@ -1,3 +1,74 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+languageCode: "en"
+title: "ReFreshing"
+# title: "cyberМїРъ"
+baseURL: "https://cybmir.ru/"
+
+enableInlineShortcodes: true
+publishDir: "@_site"
+enableRobotsTXT: false
+
+# bd5
+markup:
+  goldmark:
+    renderer:
+      unsafe:           true
+  highlight:
+    noClasses:          false
+  tableOfContents:
+    startLevel:         2
+    endLevel:           4
+
+# theme: hugo-refreshing
+# theme: ../..
+#########################################
+######## Uncomment this option ##########
+#########################################
+# This options specify where to look for the images used in this config
+# The default value is the "asset" directory of this theme
+# assetDir: "static"
+
+# Option to specify the default language of the theme
+# I.e., the landing language of your root
+# DefaultContentLanguage: en
+DefaultContentLanguage: "ru"
+
+Taxonomies:
+  category: "categories"
+  tag: "tags"
+
+params:
+  # bs5 r44
+  description: "It's refreshing to see a site that's so glorious"
+  authors:  "wBuresh, ErFandor"
+    # parameter used to specify if you want to minify the imported js
+  jsMinify: false
+  # parameter used to specify if you want to minify the imported css
+  cssMinify: false
+  # parameter used to specify if you want to calculate the css integrity true
+  cssIntegrity: false
+  # parameter used to specify if you want to calculate the js integrity
+  jsIntegrity: false
+  # option to specify the main colour of the theme
+  mainColour: "#00D1B2"
+
+  # navbar settings
+  darkModeSwitch: true
+  navbarTaxsonomy: false
+  navbarLayouts: true
+  navbarUser: true
+
+  # homepage options (c101)
+  homepage:
+    # this options let you specify if you want a link to the homepage
+    # it can be: "none", "menu", "footer" or "menu+footer"
+    # linkPosition: "footer"
+    # this options let you specify the text of the link to the homepage
+    # linkText: "Homepage"
+    # option to specify the title in the homepage
+    title: ReFreshing
+    # option to specify the subtitle in the homepage
+    subtitle: It's refreshing to see a site with such a beautiful theme
+    # option to specify image in the homepage
+    image: "/images/avataaars.png" # worker.svg
+    # option to specify the width of the image in the homepage
+    imageWidth: 500px
