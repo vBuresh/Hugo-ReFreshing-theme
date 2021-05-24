@@ -1,0 +1,2 @@
+<svg xmlns="http://www.w3.org/2000/svg"{{ with .width }} width="{{ . }}"{{ end }}{{ with .height }} height="{{ . }}"{{ end }}{{ with .class }} class="{{ . }}"{{ end }} viewBox="0 0 16 16" role="img"><title>{{ with .title }}{{ . }}{{ else }}rfi-darkmode{{ end }}</title><path fill-rule="evenodd" d="M8 15V1a7 7 0 1 1 0 14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+</svg>
