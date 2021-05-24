@@ -1,0 +1,48 @@
+- id: cyberMiR
+  translation: "cyberМїРъ"
+- id: leaf
+  translation: "Листики"
+- id: author
+  translation: "Автор"
+- id: readMore
+  translation: "Читать »"
+- id: moreDetails
+  translation: "Подробнее..."
+- id: mainMenu
+  translation: "Меню"
+- id: menuPosts
+  translation: "проБуквы"
+- id: menuHugo
+  translation: "проЦифры"
+- id: allTags
+  translation: "Все теги"
+- id: newPublications
+  translation: "Новые публикации"
+- id: categories
+  translation: "Категории"
+- id: tags
+  translation: "Теги"
+- id: postedOn
+  translation: "Опубликовано"
+- id: lastModified
+  translation: "Последние изменения - от "
+# FIXME: - id: readingTime
+#   translation: "Чтение займет до {{.Count}} мин."
+- id: words
+  translation: "Количество слов"
+- id: website
+  translation: "Hugo ReFreshing"
+- id: credits
+  translation: "Благодарим"
+- id: copyright
+  translation: "Права и лицензии"
+- id: contacts
+  translation: "Контакты"
+- id: homepage
+  translation: "Главная страница"
+- id: aboutProject
+  translation: "О проекте"
+- id: editorialPolicy
+  translation: "Редполитика"
+- id: pageTOC
+  translation: "Оглавление"

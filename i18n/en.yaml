@@ -1,0 +1,48 @@
+- id: cyberMiR
+  translation: "cMiP"
+- id: leaf
+  translation: "Leaf"
+- id: author
+  translation: "Author"
+- id: readMore
+  translation: "Read more"
+- id: moreDetails
+  translation: "Details..."
+- id: mainMenu
+  translation: "Menu"
+- id: menuPosts
+  translation: "Letters"
+- id: menuHugo
+  translation: "Digits"
+- id: allTags
+  translation: "All Tags"
+- id: newPublications
+  translation: "New publications"
+- id: categories
+  translation: "Categories"
+- id: tags
+  translation: "Tags"
+- id: postedOn
+  translation: "Posted on"
+- id: lastModified
+  translation: "Last modified"
+# FIXME - id: readingTime
+#   translation: "Reading Time {{.Count}} min."
+- id: words
+  translation: "words"
+- id: website
+  translation: "Website"
+- id: credits
+  translation: "Credits"
+- id: copyright
+  translation: "Copyright"
+- id: contacts
+  translation: "Contacts"
+- id: homepage
+  translation: "Homepage"
+- id: aboutProject
+  translation: "About project"
+- id: editorialPolicy
+  translation: "Editorial policy"
+- id: pageTOC
+  translation: "Table Of Contents"
