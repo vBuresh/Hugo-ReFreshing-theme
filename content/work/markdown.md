@@ -65,7 +65,79 @@ This word is bold. This word is italic.
 
 Синтаксис Markdown нельзя использовать внутри блочных HTML-тегов. Например, `<p>italic and **bold**</p>` работать не будут.
 
-## Рецензирование
+## Extended Syntax 
+
+### Footnotes
+
+[Footnotes](https://www.markdownguide.org/extended-syntax/#footnotes)
+
+Here's a simple footnote,[^1] and here's a longer one.[^bignote]
+
+[^1]: This is the first footnote.
+
+[^bignote]: Here's one with multiple paragraphs and code.
+
+    Indent paragraphs to include them in the footnote.
+
+    `{ my code }`
+
+    Add as many paragraphs as you like.
+
+### Heading IDs
+
+Many Markdown processors support custom IDs for headings — some Markdown processors automatically add them. Adding custom IDs allows you to link directly to headings and modify them with CSS. To add a custom heading ID, enclose the custom ID in curly braces on the same line as the heading.
+
+`### My Great Heading {#custom-id}`
+
+The HTML looks like this:
+
+`<h3 id="custom-id">My Great Heading</h3>`
+
+Definition Lists
+
+Some Markdown processors allow you to create definition lists of terms and their corresponding definitions. To create a definition list, type the term on the first line. On the next line, type a colon followed by a space and the definition.
+
+First Term
+: This is the definition of the first term.
+
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
+
+The HTML looks like this:
+
+```html
+<dl>
+  <dt>First Term</dt>
+  <dd>This is the definition of the first term.</dd>
+  <dt>Second Term</dt>
+  <dd>This is one definition of the second term. </dd>
+  <dd>This is another definition of the second term.</dd>
+</dl>
+```
+
+Task Lists
+
+Task lists allow you to create a list of items with checkboxes. In Markdown applications that support task lists, checkboxes will be displayed next to the content. To create a task list, add dashes (-) and brackets with a space ([ ]) in front of task list items. To select a checkbox, add an x in between the brackets ([x]).
+
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+
+Using Emoji Shortcodes
+
+Some Markdown applications allow you to insert emoji by typing emoji shortcodes. These begin and end with a colon and include the name of an emoji.
+
+Gone camping! :tent: Be back soon.
+
+That is so funny! :joy:
+
+
+
+
+Рецензирование
+
+
 
 
 
