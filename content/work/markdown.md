@@ -28,6 +28,10 @@ Markdown создан Джоном Грубером [John Gruber](https://daring
 - [site: Markdown Guide](https://www.markdownguide.org/)
 - [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 
+<a href="https://daringfireball.net/projects/markdown/">Daring Fireball: Markdown, John Gruber (Creator of Markdown)</a>
+<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet, Adam Pritchard</a>
+<a href="https://www.markdowntutorial.com/">Markdown Tutorial (Interactive), Garen Torikian</a>
+
 Применение Markdown отличается от использования редактора WYSIWYG. Например, в текстовых процесорах, таких, как libreJffise, Microsoft Word и др. для форматирования слов и фраз пользователь нажимает соответствующие кнопки, и изменения сразу видны, а в Markdown пользователь добавляет к тексту символы, определенные синтаксисом Markdown, чтобы указать, как должны выглядеть очмеченные ими элементы текста (документа).
 
 Чтобы обозначить заголовок, следует перед ним поместить знак числа (например, # Заголовок один). Или, чтобы выделить фразу жирным шрифтом, достоточно добавьте две звездочки до и после нее (например, ** этот текст выделен жирным шрифтом **). Чтобы привыкнуть к синтаксису Markdown может потребоваться некоторое время. Скорее всего - меньше одного часа. Закрепить и углубить знания поможнт это замечательное посбие 
