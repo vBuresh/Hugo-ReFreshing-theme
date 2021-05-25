@@ -26,25 +26,12 @@ Markdown создан Джоном Грубером [John Gruber](https://daring
 - [Markdown By John Gruber](https://daringfireball.net/projects/markdown/)
 - [GitHub: markdown-guide](https://github.com/mattcone/markdown-guide)
 - [site: Markdown Guide](https://www.markdownguide.org/)
+- 
+Применение Markdown отличается от использования редактора WYSIWYG. Например, в текстовых процесорах, таких, как libreJffise, Microsoft Word и др. для форматирования слов и фраз пользователь нажимает соответствующие кнопки, и изменения сразу видны, а в Markdown пользователь добавляет к тексту символы, определенные синтаксисом Markdown, чтобы указать, как должны выглядеть очмеченные ими элементы текста (документа).
 
-Using Markdown is different than using a WYSIWYG editor. In an application like Microsoft Word, you click buttons to format words and phrases, and the changes are visible immediately. Markdown isn’t like that. When you create a Markdown-formatted file, you add Markdown syntax to the text to indicate which words and phrases should look different.
-Применение Markdown отличается от использования редактора WYSIWYG. Например, в текстовых процесорах, таких, как libreJffise, Microsoft Word и др. для форматирования слов и фраз пользователь нажимает соответствующие кнопки, и изменения сразу видны, а в Markdown пользователь добавляет к тексту опредекленные синтаксисом Markdown символы, чтобы указать, как должны выглядеть указаные ими элементы текста и документа.
-
-For instance, to denote a heading, you add a number sign before it (e.g., # Heading One). Or to make a phrase bold, you add two asterisks before and after it (e.g., **this text is bold**). It may take a while to get used to seeing Markdown syntax in your text, especially if you’re accustomed to WYSIWYG applications. The screenshot below shows a Markdown file displayed in the Atom text editor.
-
-Например, чтобы обозначить заголовок, вы добавляете перед ним знак числа (например, # Заголовок один). Или, чтобы выделить фразу жирным шрифтом, добавьте две звездочки до и после нее (например, ** этот текст выделен жирным шрифтом **). Чтобы привыкнуть к синтаксису Markdown в тексте, может потребоваться некоторое время, особенно если вы привыкли к приложениям WYSIWYG. На снимке экрана ниже показан файл Markdown, отображаемый в текстовом редакторе Atom.
-
-
-
+Чтобы обозначить заголовок, следует перед ним поместить знак числа (например, # Заголовок один). Или, чтобы выделить фразу жирным шрифтом, достоточно добавьте две звездочки до и после нее (например, ** этот текст выделен жирным шрифтом **). Чтобы привыкнуть к синтаксису Markdown может потребоваться некоторое время. Скорее всего - меньше одного часа. Закрепить и углубить знания поможнт это замечательное посбие 
 
 [What is Markdown?](https://www.markdownguide.org/getting-started/#what-is-markdown)
-
-
-
-
-
-
-Несмотря на
 
 Markdown Guide - это бесплатное справочное руководство с открытым исходным кодом, в котором объясняется, как использовать Markdown, простой и легкий в использовании язык разметки, который можно использовать для форматирования практически любого документа.
 
