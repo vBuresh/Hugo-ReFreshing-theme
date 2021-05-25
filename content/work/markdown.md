@@ -136,12 +136,21 @@ Gone camping! :tent: Be back soon.
 
 That is so funny! :joy:
 
-
-
-
 Рецензирование
 
+markdownify
 
+[markdownify](https://gohugo.io/functions/markdownify/#readout)
+
+Runs the provided string through the Markdown processor.
+
+Syntax
+
+`markdownify INPUT`
+
+`{{ .Title | markdownify }}`
+
+Note: if you need Render Hooks, which `markdownify` doesn’t currently support, use .RenderString instead.
 
 
 
