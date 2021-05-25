@@ -17,27 +17,20 @@ tags:
   - Markdown
 ---
 
-Markdown (маркда́ун) — это одним из самых распрострненных языков разметки в мире. Его отличает необычайная логичность, постота и легкость. Элементы форматирования помещаюся непостредственно в текст документа. При этом полностью сохраняется читаемость документа человеком. Кроме того достигается всокая готовность текста к машинной обработке с целью преобразования в многочисленные языки и форматы, в том числе: HTML, Rich Text, .odt, .txt PDF и пр.
+Markdown (маркда́ун) — это одним из самых распрострненных языков разметки в мире. Его отличает необычайная логичность, постота и легкость. Элементы форматирования помещаюся непостредственно в текст документа в соответствии с синтаксисом (от греч. 'строй, порядок') Markdown. При этом полностью сохраняется читаемость документа человеком. Кроме того достигается высокая готовность текста к машинной обработке с целью преобразования в многочисленные языки и форматы, в том числе: HTML, Rich Text, .odt, .txt PDF и пр.
 
 Markdown создан Джоном Грубером [John Gruber](https://daringfireball.net/projects/markdown/) и Аароном Шварцем [Aaron Swartz](https://en.wikipedia.org/wiki/Aaron_Swartz) в 2004 году. [Подробнее см. материал в Википедии...](https://ru.wikipedia.org/wiki/Markdown).
 
+О высокой популярности Markdown свидетельствует обалие информации о нем в интернете. Вот, пожалуй, самые востребованные пособия по Markdown:  
 
 - [Markdown By John Gruber](https://daringfireball.net/projects/markdown/)
 - [GitHub: markdown-guide](https://github.com/mattcone/markdown-guide)
 - [site: Markdown Guide](https://www.markdownguide.org/)
 
-## Маркдаун - это...
-
-Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Created by John Gruber in 2004, Markdown is now one of the world’s most popular markup languages.
-
-Markdown - это облегченный язык разметки, который можно использовать для добавления элементов форматирования в текстовые документы с открытым текстом. Markdown, созданный Джоном Грубером в 2004 году, сейчас является одним из самых популярных языков разметки в мире.
-
 Using Markdown is different than using a WYSIWYG editor. In an application like Microsoft Word, you click buttons to format words and phrases, and the changes are visible immediately. Markdown isn’t like that. When you create a Markdown-formatted file, you add Markdown syntax to the text to indicate which words and phrases should look different.
+Применение Markdown отличается от использования редактора WYSIWYG. Например, в текстовых процесорах, таких, как libreJffise, Microsoft Word и др. для форматирования слов и фраз пользователь нажимает соответствующие кнопки, и изменения сразу видны, а в Markdown пользователь добавляет к тексту опредекленные синтаксисом Markdown символы, чтобы указать, как должны выглядеть указаные ими элементы текста и документа.
 
 For instance, to denote a heading, you add a number sign before it (e.g., # Heading One). Or to make a phrase bold, you add two asterisks before and after it (e.g., **this text is bold**). It may take a while to get used to seeing Markdown syntax in your text, especially if you’re accustomed to WYSIWYG applications. The screenshot below shows a Markdown file displayed in the Atom text editor.
-
-
-Использование Markdown отличается от использования редактора WYSIWYG. В таком приложении, как Microsoft Word, вы нажимаете кнопки для форматирования слов и фраз, и изменения сразу видны. Markdown не такой. Когда вы создаете файл в формате Markdown, вы добавляете к тексту синтаксис Markdown, чтобы указать, какие слова и фразы должны выглядеть по-разному.
 
 Например, чтобы обозначить заголовок, вы добавляете перед ним знак числа (например, # Заголовок один). Или, чтобы выделить фразу жирным шрифтом, добавьте две звездочки до и после нее (например, ** этот текст выделен жирным шрифтом **). Чтобы привыкнуть к синтаксису Markdown в тексте, может потребоваться некоторое время, особенно если вы привыкли к приложениям WYSIWYG. На снимке экрана ниже показан файл Markdown, отображаемый в текстовом редакторе Atom.
 
