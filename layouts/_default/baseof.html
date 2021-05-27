@@ -5,13 +5,16 @@
     {{- partial "stylesheet.html" . -}}
   <head>
     <body>
+      {{- partial "sidebar.button.html" . -}}
       <section class="cover-container">
-        {{- partial "header.html" . -}}
+        {{- partial "navbar.html" . -}}
+        {{/* {{- partial "header.html" . -}} */}}
         <div id="content">
           {{- block "main" . }}{{- end }}
         </div>
         {{- partial "footer.html" . -}}
       </section>
+      {{- partial "sidebar.html" . -}}
       {{- partial "scripts.html" . -}}
     </body>
 </html>
