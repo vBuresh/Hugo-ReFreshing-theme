@@ -1,26 +1,3 @@
-.sass-cache/
-*.css.map
-*.sass.map
-*.scss.map
-themes/
-assets/bootstrap/
-assets/js
-assets/images
-assets/css
-
-wMedia/
-exampleSite/
-
-# Вспомогательные файлы
 *.log*
-node_modules/
-wREADME.md
-resources/
-
-# Файлы редактора VScode
 .vscode
-
-# Директория выхлопа (по умолчанию - public, изменено в config.yaml: publishDir: "@_site"
-@_site/
-
-content/
+resources/

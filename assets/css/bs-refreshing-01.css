@@ -1,0 +1,896 @@
+/*!
+* Bootstrap v5.2.0-beta1 - кастомизация v003
+*/
+:root {
+  --bs-font-sans-serif: "Golos Text VF";
+  --bs-font-monospace: "Fira Code VF";
+  --mainColour: var(--rfi-color);
+  --rfi-darkHugoBlue: #132029;
+  --rfi-veryDarkBlue: #001a33;
+  --rfi-darkHugo: #0a1922;
+  --rfi-verydarkHugo: #040b0e;
+  --rfi-blackDakmode: #111;
+  --rfi-color: #33ccff;
+  --rfi-aHover: #0a58ca;
+  --rfi-aLinks: var(--mainColour);
+  --bd-info: var(--rfi-color);
+  --bd-success: #33ffcc;
+  --bd-warning: #ffcc33;
+  --bd-danger: #cc0066;
+  --bd-secondary: var(--bs-gray-500);
+  --chroma-comment: #75715e;
+}
+
+@font-face {
+  font-family: 'Fira Code VF';
+  font-style: normal;
+  font-weight: 300 700;
+  src:
+    url('../fonts/fira/FiraCode-VF.woff2') format('woff2-variations'),
+    url('../fonts/fira/FiraCode-VF.woff') format('woff-variations');
+}
+
+@font-face {
+  font-family: 'GolosTextWebVF';
+  src:
+    url('url(../fonts/golos/Golos-Text_VF.woff2') format('woff2'),
+    url('url(../fonts/golos/Golos-Text_VF.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'GolosUIWebVF';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    url('url(../fonts/golos/Golos-UI_VF.woff2') format('woff2'),
+    url('url(../fonts/golos/Golos-UI_VF.woff') format('woff');
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--bs-gray-600);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--bs-gray-800);
+}
+
+/* rfi-dev
+  var(--myAccent)
+  #3db9bb Moderate cyan Освежающий (сине-зеленый)
+  #33cccc Strong cyan.
+  #339999 Dark moderate cyan.
+*/
+
+/* подкартиночные подписи для topPageimg и  topBanner */
+
+.badge {
+  background-color: var(--mainColour);
+  color: var(--rfi-darkHugo);
+}
+
+/* bs-6074 */
+.offcanvas-body {
+  text-align: left;
+}
+
+/* Typography */
+/*TODO change acsient color 205-211 */
+a {
+  color: var(--bs-primary);
+  /* color: var(--rfi-aLinks); */
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--rfi-aHover);
+  /* color: var(--mainColour); */
+  text-decoration: none;
+}
+
+
+/* Изображения */
+
+/*
+themes/hugo-refreshing/layouts/partials/topBanner.html
+themes/hugo-refreshing/layouts/partials/topPageimg.html
+layouts/partials/artGallery.html
+layouts/partials/artGallery-List.html
+.rfi-topbanner
+.rfi-toppageimg
+.rfi-artgallery
+.rfi-artgallery-list
+
+*/
+
+.rfi-toppageimg .figure {
+   max-height: 850px;
+}
+
+figcaption {
+  font-size: 1em;
+  color: var(--bs-gray-600);
+  text-align: right;
+  font-style: italic;
+  margin-right: .25rem;
+  /* margin-top: .25rem */
+}
+
+table {
+  border-color: var(--bs-gray-300);
+  margin-bottom: 1rem;
+  width: 100%;
+  vertical-align: top;
+}
+
+td {
+  border-bottom: 1px solid var(--bs-gray-300);
+  line-height: 2rem;
+}
+
+.lntable td {
+  line-height: 1.32rem;
+  font-size: 1.125em;
+}
+
+/* Callouts */
+blockquote,
+.bquote,
+.bd-callout {
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0 solid var(--bs-gray-100);
+  border-left-width: .2rem;
+}
+
+blockquote h4,
+.bquote h4,
+.bd-callout h4 {
+  margin-bottom: .25rem;
+}
+
+blockquote p,
+.bquote p,
+.bd-callout p:last-child {
+  margin-bottom: 0;
+}
+
+/*
+ blockquote code,
+.bquote code,
+.bd-callout code {
+  @include border-radius();
+} */
+
+blockquote+.bd-callout,
+.bquote+.bd-callout,
+.bd-callout+.bd-callout {
+  margin-top: -.25rem;
+}
+
+blockquote {
+  background-color: var(--bs-gray-100);
+  /* margin-left: 4rem; */
+  background-image: url("data:image/svg+xml,<svg viewBox='0 0 50 50' fill='%23adb5bd' xmlns='http://www.w3.org/2000/svg'><path d='M26.872 15.838c-5.576 1.496-9.114 4.608-10.613 9.276 1.38-2.155 3.358-3.232 5.936-3.232 1.979 0 3.598.658 4.977 1.975 1.319 1.316 2.039 2.992 2.039 4.967 0 1.915-.66 3.471-1.979 4.787-1.32 1.317-3.058 1.915-5.217 1.915-2.218 0-3.897-.718-5.157-2.094C15.6 31.995 15 30.08 15 27.627 15 21.224 18.898 16.974 26.752 15zm15.79 0c-5.576 1.496-9.114 4.608-10.613 9.276 1.379-2.155 3.357-3.232 5.936-3.232 1.978 0 3.597.658 4.977 1.975C44.28 25.173 45 26.85 45 28.824c0 1.915-.66 3.471-1.978 4.787-1.32 1.317-3.059 1.915-5.217 1.915-2.219 0-3.898-.718-5.157-2.094-1.259-1.437-1.859-3.351-1.859-5.805 0-6.403 3.898-10.653 11.753-12.627z'/></svg>");
+  background-repeat: no-repeat;
+  background-size: 2.2rem 2.2rem;
+  color: var(--bs-black);
+  font-size: 1.0725rem;
+  font-style: italic;
+  border-left-color: var(--bs-gray-500);
+  padding-left: 2.3em;
+}
+
+blockquote i {
+  display: block;
+  color: var(--bs-gray-600);
+  font-size: 0.875em;
+  text-align: right !important;
+  margin-top: .5em !important;
+  margin-bottom: -1rem;
+}
+
+blockquote i::before {
+  content: "— ";
+}
+
+.bd-callout i {
+  display: block;
+  color: var(--bs-gray-600);
+  font-size: 0.875em;
+  text-align: right !important;
+  margin-top: .5em !important;
+  margin-bottom: -1rem;
+}
+
+.bd-callout i::before {
+  content: "— ";
+}
+
+.bquote blockquote {
+  background-image: none;
+  border: 0;
+  padding: 0 2.3em 0 0;
+}
+
+.bquote svg {
+  float: right;
+  margin-right: .5em;
+}
+
+/*  Components */
+.rfi-navbaroff a {
+  color: var(--bs-black);
+}
+
+/* bs-142 - для типа контента law отступы неприемлемы*/
+.doclaw ol,
+ul {
+  padding-left: 0;
+}
+
+
+.doctoc ol,
+ul {
+  padding-left: 1.2rem;
+}
+
+.doctoc a {
+  /* color: var(--rfi-aLinks); */
+  text-decoration: none;
+}
+
+.doctoc a:hover {
+  color: var(--mainColour);
+  /* color: var(--mainColour); */
+  text-decoration: none;
+}
+
+.doctoc .list-group-item:focus {
+  color: var(--rfi-aHover);
+  background-color: var(--bs-gray-100);
+  text-decoration: underline;
+}
+
+/*
+.btn-close {
+ color: var(--mainColour);
+} */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* NOTE
+Placeholder svg used in the bs docs.
+Remember to update `_layouts/examples.html` too if this changes! */
+.bd-placeholder-img {
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+/* Variations */
+.bd-callout-info {
+  border-left-color: var(--bd-info) !important;
+}
+
+.bd-callout-warning {
+  border-left-color: var(--bd-warning) !important;
+}
+
+.bd-callout-danger {
+  border-left-color: var(--bd-danger) !important;
+}
+
+.bd-callout-secondary {
+  border-left-color: var(--bd-secondary) !important;
+}
+
+.bd-callout-success {
+  border-left-color: var(--bd-success) !important;
+}
+
+/* syntax */
+.description-lead,
+.highlight {
+  margin-bottom: 1rem;
+}
+
+/* bs240 */
+code {
+  font-size: 1em;
+  /* font-size: 0.875em; */
+  color: #cc0066;
+}
+
+pre,
+.chroma {
+  color: var(--bs-gray-200);
+  background-color: var(--rfi-darkHugoBlue);
+  padding: 10px;
+}
+
+/* Other */
+.chroma .x {}
+
+/* Error */
+.chroma .err {
+  color: #960050;
+  background-color: #1e0010
+}
+
+/* LineTableTD */
+.chroma .lntd {
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/* LineTable */
+.chroma .lntable {
+  border-spacing: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: auto;
+  overflow: auto;
+  display: block;
+}
+
+/* LineHighlight */
+.chroma .hl {
+  display: block;
+  width: 100%;
+  line-height: 1.4rem;
+  background-color: var(--bs-gray-800)
+}
+
+/* LineNumbersTable */
+/* NOTE display: в chromium margin: и padding: - ломали нумерацию и пропуск строк */
+/* .chroma .lnt { margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: var(--bs-gray-600)} */
+.chroma .lnt {
+  color: var(--bs-gray-600)
+}
+
+/* LineNumbers */
+.chroma .ln {
+  margin-right: 0.4em;
+  padding: 0 0.4em 0 0.4em;
+  color: var(--bs-gray-600)
+}
+
+/* Keyword */
+.chroma .k {
+  color: #66d9ef
+}
+
+/* KeywordConstant */
+.chroma .kc {
+  color: #66d9ef
+}
+
+/* KeywordDeclaration */
+.chroma .kd {
+  color: #66d9ef
+}
+
+/* KeywordNamespace */
+.chroma .kn {
+  color: #f92672
+}
+
+/* KeywordPseudo */
+.chroma .kp {
+  color: #66d9ef
+}
+
+/* KeywordReserved */
+.chroma .kr {
+  color: #66d9ef
+}
+
+/* KeywordType */
+.chroma .kt {
+  color: #66d9ef
+}
+
+/* Name */
+.chroma .n {}
+
+/* NameAttribute */
+.chroma .na {
+  color: #a6e22e
+}
+
+/* NameBuiltin */
+.chroma .nb {}
+
+/* NameBuiltinPseudo */
+.chroma .bp {}
+
+/* NameClass */
+.chroma .nc {
+  color: #a6e22e
+}
+
+/* NameConstant */
+.chroma .no {
+  color: #66d9ef
+}
+
+/* NameDecorator */
+.chroma .nd {
+  color: #a6e22e
+}
+
+/* NameEntity */
+.chroma .ni {}
+
+/* NameException */
+.chroma .ne {
+  color: #a6e22e
+}
+
+/* NameFunction */
+.chroma .nf {
+  color: #a6e22e
+}
+
+/* NameFunctionMagic */
+.chroma .fm {}
+
+/* NameLabel */
+.chroma .nl {}
+
+/* NameNamespace */
+.chroma .nn {}
+
+/* NameOther */
+.chroma .nx {
+  color: #a6e22e
+}
+
+/* NameProperty */
+.chroma .py {}
+
+/* NameTag */
+.chroma .nt {
+  color: #f92672
+}
+
+/* NameVariable */
+.chroma .nv {}
+
+/* NameVariableClass */
+.chroma .vc {}
+
+/* NameVariableGlobal */
+.chroma .vg {}
+
+/* NameVariableInstance */
+.chroma .vi {}
+
+/* NameVariableMagic */
+.chroma .vm {}
+
+/* Literal */
+.chroma .l {
+  color: #ae81ff
+}
+
+/* LiteralDate */
+.chroma .ld {
+  color: #e6db74
+}
+
+/* LiteralString */
+.chroma .s {
+  color: #e6db74
+}
+
+/* LiteralStringAffix */
+.chroma .sa {
+  color: #e6db74
+}
+
+/* LiteralStringBacktick */
+.chroma .sb {
+  color: #e6db74
+}
+
+/* LiteralStringChar */
+.chroma .sc {
+  color: #e6db74
+}
+
+/* LiteralStringDelimiter */
+.chroma .dl {
+  color: #e6db74
+}
+
+/* LiteralStringDoc */
+.chroma .sd {
+  color: #e6db74
+}
+
+/* LiteralStringDouble */
+.chroma .s2 {
+  color: #e6db74
+}
+
+/* LiteralStringEscape */
+.chroma .se {
+  color: #ae81ff
+}
+
+/* LiteralStringHeredoc */
+.chroma .sh {
+  color: #e6db74
+}
+
+/* LiteralStringInterpol */
+.chroma .si {
+  color: #e6db74
+}
+
+/* LiteralStringOther */
+.chroma .sx {
+  color: #e6db74
+}
+
+/* LiteralStringRegex */
+.chroma .sr {
+  color: #e6db74
+}
+
+/* LiteralStringSingle */
+.chroma .s1 {
+  color: #e6db74
+}
+
+/* LiteralStringSymbol */
+.chroma .ss {
+  color: #e6db74
+}
+
+/* LiteralNumber */
+.chroma .m {
+  color: #ae81ff
+}
+
+/* LiteralNumberBin */
+.chroma .mb {
+  color: #ae81ff
+}
+
+/* LiteralNumberFloat */
+.chroma .mf {
+  color: #ae81ff
+}
+
+/* LiteralNumberHex */
+.chroma .mh {
+  color: #ae81ff
+}
+
+/* LiteralNumberInteger */
+.chroma .mi {
+  color: #ae81ff
+}
+
+/* LiteralNumberIntegerLong */
+.chroma .il {
+  color: #ae81ff
+}
+
+/* LiteralNumberOct */
+.chroma .mo {
+  color: #ae81ff
+}
+
+/* Operator */
+.chroma .o {
+  color: #f92672
+}
+
+/* OperatorWord */
+.chroma .ow {
+  color: #f92672
+}
+
+/* Punctuation */
+.chroma .p {}
+
+/* Comment */
+.chroma .c {
+  color: var(--chroma-comment)
+}
+
+/* CommentHashbang */
+.chroma .ch {
+  color: var(--chroma-comment)
+}
+
+/* CommentMultiline */
+.chroma .cm {
+  color: var(--chroma-comment)
+}
+
+/* CommentSingle */
+.chroma .c1 {
+  color: var(--chroma-comment)
+}
+
+/* CommentSpecial */
+.chroma .cs {
+  color: var(--chroma-comment)
+}
+
+/* CommentPreproc */
+.chroma .cp {
+  color: var(--chroma-comment)
+}
+
+/* CommentPreprocFile */
+.chroma .cpf {
+  color: var(--chroma-comment)
+}
+
+/* Generic */
+.chroma .g {}
+
+/* GenericDeleted */
+.chroma .gd {
+  color: #f92672
+}
+
+/* GenericEmph */
+.chroma .ge {
+  font-style: italic
+}
+
+/* GenericError */
+.chroma .gr {}
+
+/* GenericHeading */
+.chroma .gh {}
+
+/* GenericInserted */
+.chroma .gi {
+  color: #a6e22e
+}
+
+/* GenericOutput */
+.chroma .go {}
+
+/* GenericPrompt */
+.chroma .gp {}
+
+/* GenericStrong */
+.chroma .gs {
+  font-weight: bold
+}
+
+/* GenericSubheading */
+.chroma .gu {
+  color: var(--chroma-comment)
+}
+
+/* GenericTraceback */
+.chroma .gt {}
+
+/* GenericUnderline */
+.chroma .gl {}
+
+/* TextWhitespace */
+.chroma .w {}
+
+/*!
+ * Dark Mode Switch v1.0.1 (https://github.com/coliff/dark-mode-switch)
+ * Copyright 2021 C.Oliff
+ * Licensed under MIT (https://github.com/coliff/dark-mode-switch/blob/main/LICENSE)
+ */
+[data-theme="dark"] {
+  background-color: var(--rfi-darkHugo) !important;
+  color: var(--bs-gray-100);
+}
+
+[data-theme="dark"] .bg-black {
+  background-color: var(--bs-white) !important;
+}
+
+[data-theme="dark"] .bg-dark {
+  background-color: var(--bs-gray-100) !important;
+}
+
+[data-theme="dark"] .card-body .table {
+  background-color: var(--rfi-darkHugoBlue) !important;
+  color: var(--bs-gray-200);
+  border-color: var(--bs-gray-600);
+}
+
+[data-theme="dark"] .bg-light {
+  background-color: var(--rfi-darkHugoBlue) !important;
+}
+
+[data-theme="dark"] .bg-white {
+  background-color: var(--rfi-darkHugo) !important;
+}
+
+/* NOTE B^ */
+/* FIXME добиться переключения  */
+[data-theme="dark"] .offcanvas {
+  background-color: var(--rfi-darkHugo) !important;
+}
+
+[data-theme="dark"] .list-group a {
+  background-color: var(--rfi-darkHugoBlue);
+  color: var(--bs-gray-200);
+}
+
+[data-theme="dark"] .list-group.doctoc a {
+  background-color: var(--rfi-darkHugo);
+  color: var(--bs-gray-200);
+}
+
+[data-theme="dark"] .list-group-item-action {
+  background-color: var(--rfi-darkHugoBlue) !important;
+  color: var(--bs-gray-100);
+}
+
+[data-theme="dark"] .list-group-item:hover,
+.list-group-item:focus {
+  background-color: var(--rfi-verydarkHugo);
+  color: var(--mainColour);
+}
+
+[data-theme="dark"] .doctoc a:hover,
+.doctoc a:focus {
+  color: var(--mainColour);
+}
+
+[data-theme="dark"] .nav-masthead .nav-link {
+  border-bottom: .25rem solid transparent;
+  color: var(--bs-white);
+}
+
+[data-theme="dark"] .nav-masthead .active {
+  color: var(--bs-white);
+  border-bottom-color: var(--bs-white);
+}
+
+[data-theme="dark"] blockquote {
+  background-color: var(--rfi-darkHugoBlue);
+  color: var(--bs-gray-200);
+}
+
+[data-theme="dark"] a {
+  color: var(--mainColour);
+  text-decoration: none;
+}
+
+[data-theme="dark"] a:hover {
+  color: var(--rfi-aHover);
+  text-decoration: none;
+}
+
+.rfi-navbaroff .navbar-brand:hover,
+.navbar-brand:focus {
+  color: var(--mainColour);
+}
+
+[data-theme="dark"] a .navbar-brand {
+  color: var(--bs-white);
+}
+
+/* RFI-cover */
+
+
+.cover-container {
+  max-width: 72rem;
+  /* min-width: 32rem; */
+}
+
+/*1152px=72rem 1140px=71.25rem или 71.250em; - 308=832px=52rem (em) 46em;*/
+
+/* description - текст из Front Mater выводится автоматически на каждую страницу
+применяется: themes/hugo-refreshing/layouts/_default/single.html
+и в оглавлении */
+.description-lead,
+.bd-placeholder-img,
+.nav-scroller .nav-link,
+.nav-masthead .nav-link {
+  font-size: 1.125rem;
+}
+
+/* * Header */
+.nav-scroller .nav-link,
+.nav-masthead .nav-link {
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+  color: var(--bs-black);
+  font-weight: 300;
+  padding: .25rem 0;
+}
+
+.nav-scroller .nav-link:focus,
+.nav-scroller .nav-link:hover,
+.nav-masthead .nav-link:focus,
+.nav-masthead .nav-link:hover {
+  /* border-bottom-color: rgba(255, 255, 255, .25); */
+  border-bottom-color: var(--bs-gray-400);
+}
+
+/*
+.nav-masthead .nav-link+.nav-link {
+   margin-left: 1rem;
+} */
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: left;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.divider {
+  background: var(--mainColour);
+  border-radius: 50px;
+  height: 4px;
+  margin-bottom: 1rem;
+  width: 68px;
+}
+
+.rfi-navbaroff .navbar-brand {
+  align-content: flex-start;
+  margin-left: 0;
+}
+
+.navbar-brand-logotitle {
+  font-family: 'Golos Text VF';
+  font-size: 2.725rem;
+  font-weight: 900;
+  color: var(--mainColour);
+}
+
+.rfi-navbaroff-tags .nav-link+.nav-link {
+  margin-left: .35rem;
+}
+
+.rfi-navbaroff .navbar-brand:hover,
+.navbar-brand:focus {
+  color: var(--rfi-aHover);
+}
+
+.rfi-navbaroff .nav-link+.nav-link::before {
+  content: "/";
+  margin-left: .15rem;
+  margin-right: .15rem;
+}

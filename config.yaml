@@ -51,12 +51,6 @@ params:
   # option to specify the main colour of the theme
   mainColour: "#00D1B2"
 
-  # navbar settings
-  darkModeSwitch: true
-  navbarTaxsonomy: false
-  navbarLayouts: true
-  navbarUser: true
-
   # homepage options (c101)
   homepage:
     # this options let you specify if you want a link to the homepage
