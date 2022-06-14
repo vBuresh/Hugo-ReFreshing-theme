@@ -1,7 +1,7 @@
 languageCode: "en"
 title: "ReFreshing"
 # title: "cyberМїРъ"
-baseURL: "https://cybmir.ru/"
+baseURL: https://example.com
 
 enableInlineShortcodes: true
 publishDir: "@_site"
