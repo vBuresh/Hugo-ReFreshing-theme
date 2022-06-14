@@ -1,0 +1,14 @@
+<div class="row justify-content-center rfi-figure">
+  <div class="col-12">
+{{- $image := "" -}}
+{{- if .Page.Params.topPageimg -}}
+<figure>
+  {{- $image = .Resources.GetMatch .Page.Params.topPageimg -}}
+  <img src="{{- $image.Permalink | relURL -}}" class="figure-img img-fluid" alt="Главное изображение страницы">
+  <figcaption class="figure-caption">
+    {{- .Page.Params.topPageimgCaption -}}
+  </figcaption>
+</figure>
+{{ end }}
+  </div>
+</div>

@@ -1,20 +1,35 @@
-<!doctype html>
+<!doctype>
 <html lang="{{ .Site.LanguageCode }}">
+
   <head>
-    {{- partial "head.html" . -}}
-    {{- partial "stylesheet.html" . -}}
-  <head>
-    <body>
-      {{- partial "sidebar.button.html" . -}}
-      <section class="cover-container">
-        {{- partial "navbar.html" . -}}
-        {{/* {{- partial "header.html" . -}} */}}
-        <div id="content">
-          {{- block "main" . }}{{- end }}
-        </div>
-        {{- partial "footer.html" . -}}
-      </section>
-      {{- partial "sidebar.html" . -}}
+    {{- partial "meta.html" . -}}
+
+    <title>{{- block "title" . -}}
+      {{ if .IsHome }}{{ .Site.Title | markdownify }} · {{ .Site.Params.summary | markdownify }}{{ else }}{{ .Title | markdownify }} · {{ .Site.Title | markdownify }} v{{ .Site.Params.site_version }}{{ end }}
+      {{- end -}}</title>
+
+    {{- partial "stylesheets.html" . -}}
+    {{- partial "favicons.html" . -}}
+    {{/* {{- partial "verbox.html" . -}} */}}
+
+  </head>
+
+  {{ block "body_override" . }}
+
+  <body>{{ end }}
+    {{ if .Site.Params.darkMode -}}
+    {{- partial "darkmode-js-subbody.html" . -}}
+    {{- end }}
+    <div class="d-flex p-3 mx-auto flex-column">
+      {{- partial "navbar/navbaroff.html" . -}}
+      <div id="content" class="container cover-container pb-5">
+        <main>{{- block "main" . }}
+          {{- end }}</main>
+      </div>
+      {{- partial "footer.html" . -}}
+      {{- partial "navbar/navbaroffcanvas.html" . -}}
       {{- partial "scripts.html" . -}}
-    </body>
+    </div>
+  </body>
+
 </html>

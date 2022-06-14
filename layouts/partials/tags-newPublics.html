@@ -1,0 +1,8 @@
+<section class="newpublics">
+  <h5 class="ps-3 pt-4"> {{ i18n "newPublications" }} </h5>
+    <div class="list-group">
+      {{ range first 5 .Site.RegularPages }}
+      <a href="{{.Permalink}}" class="list-group-item">{{ .Title }}</a>
+      {{ end }}
+    </div>
+</section>

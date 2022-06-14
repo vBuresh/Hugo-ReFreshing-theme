@@ -1,0 +1,10 @@
+<section class="newpublics">
+  <h5 class="ps-3 pt-3"> {{ i18n "lastmodPublications" }} </h5>
+  {{ range .Pages }}
+    <div class="list-group">
+     {{ range first 2 .Pages.ByLastmod.Reverse }}
+      <a href="{{.Permalink}}" class="list-group-item">{{ .Title }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
+</section>

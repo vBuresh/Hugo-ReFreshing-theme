@@ -1,0 +1,29 @@
+<header class="mb-auto">
+<div class="row flex-nowrap justify-content-between align-items-center rfi-navbaroff">
+    <div class="col-6">
+    <a class="navbar-brand" aria-current="page" href="{{ "/" | relURL }}">
+      {{- if .Site.Params.logo -}}
+      {{- $out_fo  := "brand.svg" -}}
+      {{- $img_n   := .Site.Params.logo -}}
+      {{- $type    := lower (substr $img_n (sub (len $img_n) 3) (len $img_n)) -}}
+      {{- $img     := resources.Get $img_n -}}
+      {{- if eq $type "svg" -}}
+      {{- $img    = $img | resources.ExecuteAsTemplate $out_fo . }}
+      {{- end -}}
+      <img src="{{- $img.Permalink | relURL -}}" class="d-inline-flex align-top me-0" alt="brand">
+      {{- end -}}
+      <span class="navbar-brand-logotitle">
+        {{- if .Site.Params.title -}}
+        {{ .Site.Params.title }}
+      </span>
+      {{- end -}}
+    </a>
+  </div>
+<div class="col-6 d-flex justify-content-end align-items-center">
+  {{- partial "navbar/navbaroff-tags.html" . -}}
+</div>
+</div>
+<div class="rfi-navbaroff">
+  {{- partial "navbar/navscroller.html" . -}}
+</div>
+</header>

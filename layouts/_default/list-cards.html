@@ -1,0 +1,20 @@
+  {{ define "main" }}
+  <section class="px-3 pt-3 text-start">
+    <header class="listpage-title">
+      <h1>{{.Title}}</h1>
+    </header>
+    <div class="divider"></div>
+    <div class="row row-cols-1 pb-5">
+          {{- $pagesEachPage := 3 -}}
+          <div class="col">
+            {{- range $index, $element := .Pages -}}
+            {{- if eq (mod $index $pagesEachPage) 0 -}}
+          </div>
+          <div class="row row-cols-1 row-cols-md-3 gy-2 gx-3">
+            {{- end -}}
+           {{- partial "tags/summary.html" . -}}
+            {{- end -}}
+          </div>
+      </div>
+  </section>
+  {{ end }}

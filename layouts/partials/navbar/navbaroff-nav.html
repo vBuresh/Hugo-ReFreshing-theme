@@ -1,0 +1,20 @@
+<nav class="nav nav-masthead nav-masthead-cmir">
+  {{ range .Site.RegularPages }}
+  {{- if eq .Params.showInMenu true -}}
+  <a href="{{- .Permalink | relURL -}}" class="nav-link">
+    {{- .Title -}}
+  </a>
+  {{- end -}}
+  {{- end -}}
+  {{- range .Site.Sections -}}
+  {{- if not (eq .Title "singles") -}}
+  {{- $secCount := len .Sections -}}
+  {{- if (ne $secCount 0) }}
+  {{- else -}}
+  <a class="nav-link" href="{{- .Permalink | relURL -}}">
+  {{- .Title -}}
+  </a>
+  {{- end -}}
+  {{- end -}}
+  {{- end -}}
+</nav>

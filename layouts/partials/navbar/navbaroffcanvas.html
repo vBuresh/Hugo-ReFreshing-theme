@@ -1,0 +1,43 @@
+<!-- id="offcanvasNavbarRFi" -->
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasNavbarRFi" aria-labelledby="offcanvasNavbarRFiLabel">
+
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasNavbarRFiLabel">{{ i18n "aboutProject" }}
+    </h5>
+    {{- partial "navbar/navbaroff-btn-x.html" . -}}
+  </div>
+  <!--
+Текст из в файла config.yaml строки 101-103
+Используются HTML символы &mdash; (дефис) и &period; (точка) при необходимости - убрать.
+-->
+  {{- $homepage   := .Site.Params.homepage -}}
+  {{- $title      := index $homepage "title" -}}
+  {{- $subtitle   := index $homepage "subtitle" -}}
+  {{- $summary    := index $homepage "summary" -}}
+  <div class="h5 ms-3 py-3">{{- $title -}}
+    {{- with $subtitle -}}
+    <span class="text-muted">
+      &mdash; {{ . }}&period;
+    </span>
+    {{- end -}}
+    {{- with $summary -}}
+    <span class="text-muted">
+      {{ . }}
+    </span>
+    {{- end -}}
+<a href="/about/ ">
+     {{ i18n "moreDetails" }}
+</a>
+  </div>
+
+  <div class="offcanvas-body pt-0">
+    <!-- setup -->
+    {{- partial "dark-switch.html" . -}}
+    {{- partial "tags-newPublics.html" . -}}
+    {{- partial "tags-allTags.html" . -}}
+
+    {{/* {{- partial "form-search.html" . -}}
+    {{- partial "tags-lastmodPublications" . -}} */}}
+    <!-- <p class="small">
+    https://gohugo.io/templates/taxonomy-templates/#example-list-all-site-tags</p> -->
+  </div>

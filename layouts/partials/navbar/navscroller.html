@@ -1,0 +1,23 @@
+<div class="nav-scroller mb-2">
+<div class="navtopline"></div>
+<nav class="nav d-flex nav-masthead">
+  {{ range .Site.RegularPages }}
+  {{- if eq .Params.showInMenu true -}}
+  <a href="{{- .Permalink | relURL -}}" class="nav-link">
+    {{- .Title -}}
+  </a>
+  {{- end -}}
+  {{- end -}}
+  {{- range .Site.Sections -}}
+  {{- if not (eq .Title "singles") -}}
+  {{- $secCount := len .Sections -}}
+  {{- if (ne $secCount 0) }}
+  {{- else -}}
+  <a class="nav-link" href="{{- .Permalink | relURL -}}">
+  {{- .Title -}}
+  </a>
+  {{- end -}}
+  {{- end -}}
+  {{- end -}}
+</nav>
+</div>

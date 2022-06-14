@@ -1,0 +1,10 @@
+{{- /*
+  Usage: `callout "type"`, where type is one of info
+  (default --rfi-color), danger, warning, success
+*/ -}}
+
+{{- $css_class := .Get 0 | default "secondary" -}}
+
+<div class="bg-light bd-callout bd-callout-{{ $css_class }}">
+{{ .Inner | markdownify }}
+</div>

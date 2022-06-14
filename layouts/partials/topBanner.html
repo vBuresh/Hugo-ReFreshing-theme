@@ -1,0 +1,17 @@
+<div class="rfi-topBanner">
+{{- $image := "" -}}
+{{- if .Page.Params.topBanner -}}
+{{- $image = .Resources.GetMatch .Page.Params.topBanner -}}
+<a href="{{- .Permalink | relURL -}}">
+ <img src="{{- $image.Permalink | relURL -}}" class="card-img-top" alt="Изображение в карточке">
+</a>
+<figcaption class="figure-caption">
+  {{- .Page.Params.banCaption -}}
+</figcaption>
+{{- else -}}
+  {{- $image = resources.Get .Site.Params.defaultImage -}}
+<a href="{{- .Permalink | relURL -}}">
+ <img src="{{- $image.Permalink | relURL -}}" class="card-img-top" alt="Изображение по умолчанию в карточкее">
+</a>
+{{ end }}
+</div>

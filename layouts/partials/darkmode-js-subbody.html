@@ -1,0 +1,12 @@
+<!-- dark-mode -->
+<script>
+    function initDarkModeTheme() {
+      var darkThemeSelected =
+        localStorage.getItem("darkSwitch") !== null &&
+        localStorage.getItem("darkSwitch") === "dark";
+      darkThemeSelected
+        ? document.body.setAttribute("data-theme", "dark")
+        : document.body.removeAttribute("data-theme");
+    }
+  </script>
+<script>initDarkModeTheme();</script>

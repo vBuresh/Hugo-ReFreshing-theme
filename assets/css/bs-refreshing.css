@@ -4,7 +4,7 @@
 :root {
   --mainColour: var(--rfi-color);
   --bs-font-sans-serif: "Golos Text VF", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --bs-font-monospace: "Fira Code VF", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-font-monospace: "Fira Code VF", "Golos UI VF", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /*rfi Theme variables */
   --bs-font-sans-serif: "Golos Text VF";
   --bs-font-monospace: "Fira Code VF";
@@ -25,33 +25,6 @@
   --chroma-comment: #75715e;
 }
 
-@font-face {
-  font-family: 'Fira Code VF';
-  font-style: normal;
-  font-weight: 300 700;
-  src:
-    url('../fonts/fira/FiraCode-VF.woff2') format('woff2-variations'),
-    url('../fonts/fira/FiraCode-VF.woff') format('woff-variations');
-}
-
-@font-face {
-  font-family: 'GolosTextWebVF';
-  src:
-    url('url(../fonts/golos/Golos-Text_VF.woff2') format('woff2'),
-    url('url(../fonts/golos/Golos-Text_VF.woff') format('woff');
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'GolosUIWebVF';
-  font-style: normal;
-  font-weight: normal;
-  src:
-    url('url(../fonts/golos/Golos-UI_VF.woff2') format('woff2'),
-    url('url(../fonts/golos/Golos-UI_VF.woff') format('woff');
-}
-
 *::-webkit-scrollbar {
   width: 5px;
   height: 7px;
@@ -64,15 +37,6 @@
 *::-webkit-scrollbar-thumb {
   background: var(--bs-gray-800);
 }
-
-/* rfi-dev
-  var(--myAccent)
-  #3db9bb Moderate cyan Освежающий (сине-зеленый)
-  #33cccc Strong cyan.
-  #339999 Dark moderate cyan.
-*/
-
-/* подкартиночные подписи для topPageimg и  topBanner */
 
 .badge {
   background-color: var(--mainColour);

@@ -1,0 +1,13 @@
+<!-- dark-mode -->
+{{ if .Site.Params.darkMode -}}
+<a class="nav-link">
+  <span class="form-check form-switch">
+    <input type="checkbox" class="form-check-input" id="darkSwitch" />
+    <label class="custom-control-label" for="darkSwitch"> {{ i18n "darkMode" }}</label>
+  </span>
+  <!-- dark-mode -->
+  <script>
+  var darkSwitch=document.getElementById("darkSwitch");window.addEventListener("load",function(){if(darkSwitch){var darkThemeSelected=localStorage.getItem("darkSwitch")!==null&&localStorage.getItem("darkSwitch")==="dark";darkSwitch.checked=darkThemeSelected;darkSwitch.addEventListener("change",function(){resetTheme();});}});function resetTheme(){if(darkSwitch.checked){document.body.setAttribute("data-theme","dark");localStorage.setItem("darkSwitch","dark");}else{document.body.removeAttribute("data-theme");localStorage.removeItem("darkSwitch");}}
+  </script>
+</a>
+{{ end -}}

@@ -1,52 +1,46 @@
-{{- define "main" -}}
-
-<main class="px-3">
-  <!-- <h1>Cover your page.</h1> -->
-  {{- $homepage   := .Site.Params.homepage -}}
-        {{- $title      := index $homepage "title" -}}
-        {{- $subtitle   := index $homepage "subtitle" -}}
-  <!-- <h1>Cover your page.</h1> -->
-  <h1 class="homepage-title">{{- $title -}}</h1>
-  {{- with $subtitle -}}
-  <h2 class="homepage-subtitle text-muted">
-  {{ . }}
-</h2>
-  {{- end -}}
-  <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-  <p>
-    <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
-  </p>
-  <!-- Button trigger modal -->
-  <p class="pt-3 pb-5">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
-  </button>
-  <p class="pt-5 lead">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
-
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ... привет
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
+  {{- define "main" -}}
+  <section class="px-3 text-center">
+    {{- $homepage   := .Site.Params.homepage -}}
+    {{- $title      := index $homepage "title" -}}
+    {{- $subtitle   := index $homepage "subtitle" -}}
+    {{- $image      := index $homepage "image" -}}
+    {{- $summary    := index $homepage "summary" -}}
+    <h1>{{- $title -}}</h1>
+    <div class="row justify-content-between pt-5">
+      <div class="col align-self-center">
+        {{- with $subtitle -}}
+        <h2 class="text-muted">
+          {{ . }}
+        </h2>
+        {{- end -}}
+        <p class="lead text-start">
+          {{- $summary -}}
+        </p>
+        <p class="lead pt-3 text-start">
+          И название проекта <strong><sup>v^</sup>Buresh</strong> выбрано не случайно. Оно содержит глубокий смысл и правдиво отражает эмоционально-духовную составляющую и ценность всего.</p>
+        <p class="lead text-start">
+          «Lux» на латинском обозначает массу прекрасного: свет, освещение, сияние, светило (поэт.), светоч, блеск, сверкание, ясность, очевидность, широкая гласность, известность, слава, украшение, цвет, помощь, утешение, спасение, дневной и солнечный свет, день, жизнь, зрение (поэт.)
+          <br><small class="text-end"><a href="https://ru.wiktionary.org/wiki/lux#%D0%9B%D0%B0%D1%82%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9">См. «Lux» в Викисловаре</a></small>
+        </p>
+        <p class="lead text-start">
+          Ну а про IVA, — и так всё понятно.</p>
+      </div>
+      <div class="col">
+        <figure class="figure">
+          <img src="images/logo-ivalux.jpg" class="figure-img img-fluid rounded" alt="...">
+          <figcaption class="figure-caption text-end">«Бычок». Акварель, бамага. 2021 г. Виктория Исаева</figcaption>
+        </figure>
       </div>
     </div>
-  </div>
-</main>
-
-{{- partial "sidebar.html" . -}}
-
-{{- end -}}
+<!--
+    <p class="lead pt-5">
+      <a href="/about/" class="btn btn-lg btn-outline-info fw-bold">Подробнее
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+     </a>
+    </p>
+-->
+  </section>
+  {{- end -}}
