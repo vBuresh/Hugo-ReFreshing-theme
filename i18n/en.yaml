@@ -20,6 +20,8 @@
   translation: "New publications"
 - id: categories
   translation: "Categories"
+- id: allPublicationsTags
+  translation: "Все публикации (по тегам)"
 - id: tags
   translation: "Tags"
 - id: postedOn
@@ -46,3 +48,5 @@
   translation: "Editorial policy"
 - id: pageTOC
   translation: "Table Of Contents"
+# - id: darkMode
+#   translation: "Color Schemes: light / dark"

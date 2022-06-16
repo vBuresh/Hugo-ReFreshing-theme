@@ -20,6 +20,8 @@
   translation: "Новые публикации"
 - id: categories
   translation: "Категории"
+- id: allPublicationsTags
+  translation: "Все публикации (по тегам)"
 - id: tags
   translation: "Теги"
 - id: postedOn
@@ -46,3 +48,5 @@
   translation: "Редполитика"
 - id: pageTOC
   translation: "Оглавление"
+# - id: darkMode
+#   translation: "Цветовая схема: светлая / тёмная"
