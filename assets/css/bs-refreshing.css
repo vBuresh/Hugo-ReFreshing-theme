@@ -6,8 +6,6 @@
   --bs-font-sans-serif: "Golos Text VF", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: "Fira Code VF", "Golos UI VF", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /*rfi Theme variables */
-  --bs-font-sans-serif: "Golos Text VF";
-  --bs-font-monospace: "Fira Code VF";
   --mainColour: var(--rfi-color);
   --rfi-darkHugoBlue: #132029;
   --rfi-veryDarkBlue: #001a33;
