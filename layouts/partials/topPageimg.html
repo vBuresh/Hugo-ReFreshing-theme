@@ -4,7 +4,9 @@
 {{- if .Page.Params.topPageimg -}}
 <figure>
   {{- $image = .Resources.GetMatch .Page.Params.topPageimg -}}
-  <img src="{{- $image.Permalink | relURL -}}" class="figure-img img-fluid" alt="Главное изображение страницы">
+  {{ with $image }}
+  <img src="{{- .RelPermalink | relURL -}}" class="figure-img img-fluid" alt="Главное изображение страницы">
+  {{ end }}
   <figcaption class="figure-caption">
     {{- .Page.Params.topPageimgCaption -}}
   </figcaption>
