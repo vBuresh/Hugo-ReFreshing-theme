@@ -1,14 +1,14 @@
 <div class="row justify-content-center rfi-figure">
   <div class="col-12">
-{{- $image := "" -}}
-{{- if .Page.Params.topPageimg -}}
+{{ $image := "" }}
+{{ if .Page.Params.topPageimg }}
 <figure>
-  {{- $image = .Resources.GetMatch .Page.Params.topPageimg -}}
+  {{ $image = .Resources.GetMatch .Page.Params.topPageimg }}
   {{ with $image }}
-  <img src="{{- .RelPermalink | relURL -}}" class="figure-img img-fluid" alt="Главное изображение страницы">
+  <img src="{{ .RelPermalink }}" class="figure-img img-fluid" alt="Главное изображение страницы">
   {{ end }}
   <figcaption class="figure-caption">
-    {{- .Page.Params.topPageimgCaption -}}
+    {{ .Page.Params.topPageimgCaption }}
   </figcaption>
 </figure>
 {{ end }}
