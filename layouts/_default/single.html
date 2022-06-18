@@ -1,29 +1,26 @@
-
-  {{ define "title" }}
-  {{ .Title }} &ndash; {{ .Site.Title }}
-  {{ end }}
-  {{ define "main" }}
-  <section class="text-start">
-    <header class="mt-5 mb-3">
-      <h1>{{ .Title }}
-        {{ if .Page.Params.subtitle }}
-        <small class="text-muted">
-          {{ .Page.Params.subtitle }}
-        </small>
-        {{ end }}
-      </h1>
-      <div class="divider"></div>
-      <section>
-{{ if .Page.Params.topPageimg }}
-{{- partial "topPageimg.html" . -}}
+{{ define "title" }}
+{{ .Title }} &ndash; {{ .Site.Title }}
 {{ end }}
-<div class="description-lead">
-  {{ .Description }}
-</div>
-      {{- partial "author.html" . -}}
-      </section>
-      {{- partial "toc-collapse.html" . -}}
-    </header>
-    {{ .Content }}
-  </section>
-  {{ end }}
+{{ define "main" }}
+<section class="text-start">
+  <header class="mt-5 mb-3">
+    <h1>{{ .Title }}
+      {{ if .Page.Params.subtitle }}
+      <small class="text-muted">
+        {{ .Page.Params.subtitle }}
+      </small>
+      {{ end }}
+    </h1>
+    <div class="divider"></div>
+    {{ if .Page.Params.topPageimg }}
+    {{- partial "topPageimg.html" . -}}
+    {{ end }}
+    <div class="description-lead">
+      {{ .Description }}
+    </div>
+    {{- partial "author.html" . -}}
+    {{- partial "toc-collapse.html" . -}}
+  </header>
+  {{ .Content }}
+</section>
+{{ end }}

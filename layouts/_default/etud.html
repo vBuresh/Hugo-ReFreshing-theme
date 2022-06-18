@@ -1,0 +1,28 @@
+{{ define "title" }}
+{{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+<section>
+{{ if .Page.Params.topPageimg }}
+{{- partial "topPageimg.html" . -}}
+{{ end }}
+  <header class="my-3">
+    <h1>{{ .Title }}
+      {{ if .Page.Params.subtitle }}
+      <small class="text-muted">
+        {{ .Page.Params.subtitle }}
+      </small>
+      {{ end }}
+    </h1>
+<div class="description-lead">
+  {{ .Description }}
+</div>
+    </header>
+{{ if .Page.Params.artGallery }}
+<div class="">
+   {{- partial "artGallery.html" . -}}
+</div>
+  {{ end }}
+    {{ .Content }}
+  </section>
+  {{ end }}
