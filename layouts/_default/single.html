@@ -1,9 +1,6 @@
-{{ define "title" }}
-{{ .Title }} &ndash; {{ .Site.Title }}
-{{ end }}
 {{ define "main" }}
-<section class="text-start">
-  <header class="mt-5 mb-3">
+<section>
+    <header class="my-3">
     <h1>{{ .Title }}
       {{ if .Page.Params.subtitle }}
       <small class="text-muted">
@@ -11,16 +8,28 @@
       </small>
       {{ end }}
     </h1>
+{{ if eq .Layout "gallery" }}
+        {{ if .Page.Params.topPageimg }}
+        {{ partial "topPageimg" . }}
+        {{ end }}
+    <!-- </header> -->
+    {{ partial "artgallery" . }}
+    <div class="description-lead mt-5">
+        {{ .Description }}
+    </div>
+{{ else }}
     <div class="divider"></div>
     {{ if .Page.Params.topPageimg }}
-    {{- partial "topPageimg.html" . -}}
+    {{- partial "topPageimg" . -}}
     {{ end }}
     <div class="description-lead">
       {{ .Description }}
     </div>
-    {{- partial "author.html" . -}}
-    {{- partial "toc-collapse.html" . -}}
+    {{- partial "author" . -}}
+    {{- partial "toc-collapse" . -}}
   </header>
+{{ end }}
+
   {{ .Content }}
 </section>
 {{ end }}
