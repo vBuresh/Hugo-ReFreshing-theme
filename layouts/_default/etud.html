@@ -1,7 +1,7 @@
 {{ define "main" }}
 <section>
 {{ if .Page.Params.topPageimg }}
-{{- partial "topPageimg.html" . -}}
+{{ partial "topPageimg" . -}}
 {{ end }}
   <header class="my-3">
     <h1>{{ .Title }}
