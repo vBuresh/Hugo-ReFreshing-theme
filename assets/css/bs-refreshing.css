@@ -5,8 +5,6 @@
   --mainColour: var(--rfi-color);
   --bs-font-sans-serif: "Golos Text VF", "Golos UI VF", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: "Fira Code VF", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-/* body bg color */
-  --bs-body-bg: #fff6ec;
   /*rfi Theme variables */
   --mainColour: var(--rfi-color);
   --rfi-darkHugoBlue: #132029;
@@ -78,7 +76,7 @@ layouts/partials/artGallery-List.html
 */
 
 .rfi-toppageimg .figure {
-   max-height: 850px;
+  max-height: 850px;
 }
 
 figcaption {
@@ -864,5 +862,5 @@ pre,
 }
 
 .rfi-toprageimg .card {
- background-color: inherit;
+  background-color: inherit;
 }
