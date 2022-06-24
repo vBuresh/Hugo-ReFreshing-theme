@@ -1,0 +1,17 @@
+<section class="artgallery">
+    <div class="row row-cols-1 row-cols-sm-3 row-cols-md-6 g-1">
+        {{ with .Resources.ByType "image" }}
+        {{ range . }}
+        <div class="col">
+            <div class="card">
+                <a href="{{ .RelPermalink }}">
+                    <img src="{{ .RelPermalink }}" class="card-img-top" alt="...">
+                </a>
+            </div>
+        </div>
+        {{ end }}{{ end }}
+    </div>
+    <div>
+        {{ .Inner | markdownify }}
+    </div>
+</section>
