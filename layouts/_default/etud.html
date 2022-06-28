@@ -1,8 +1,8 @@
 {{ define "main" }}
 <section>
-{{ if .Page.Params.topPageimg }}
-{{ partial "topPageimg" . -}}
-{{ end }}
+  {{ if .Page.Params.topPageimg }}
+  {{ partial "topPageimg" . -}}
+  {{ end }}
   <header class="my-3">
     <h1>{{ .Title }}
       {{ if .Page.Params.subtitle }}
@@ -11,10 +11,11 @@
       </small>
       {{ end }}
     </h1>
-<div class="description-lead">
-  {{ .Description }}
-</div>
-    </header>
-    {{ .Content }}
-  </section>
-  {{ end }}
+    <div class="description-lead">
+      {{ .Description }}
+    </div>
+  </header>
+  {{- partial "toc-collapse" . -}}
+  {{ .Content }}
+</section>
+{{ end }}
