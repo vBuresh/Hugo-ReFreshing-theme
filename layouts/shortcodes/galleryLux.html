@@ -1,21 +1,17 @@
-<!-- {{/* usage:
- {{< galleryLux row-cols-md-4 >}}
-<div class="row row-cols-1 row-cols-sm-3 row-cols-md-6 g-1">
-  */}} -->
-  {{- $rowcols := .Get 0 | default "row-cols-sm-3 row-cols-md-6" -}}
-  <section class="gallerylux">
-    <div class="row row-cols-1 {{ $rowcols }} g-1">
-      {{/* отбор изображений только *.jpg из директории images */}}
-      {{ with .Page.Resources.Match "images/*" }}
-      {{ range . }}
-      <div class="col">
-        <div class="card">
-          <a href="{{ .RelPermalink }}">
-            <img src="{{ .RelPermalink }}" class="card-img-top" alt="...">
-          </a>
-        </div>
+{{- $rowcols := .Get 0 | default "row-cols-sm-3 row-cols-md-6" -}}
+<section class="gallerylux py-3">
+  <div class="row row-cols-1 {{ $rowcols }} g-1">
+    {{/* отбор изображений только *.jpg из директории images */}}
+    {{ with .Page.Resources.Match "images/*" }}
+    {{ range . }}
+    <div class="col">
+      <div class="card">
+        <a href="{{ .RelPermalink }}">
+          <img src="{{ .RelPermalink }}" class="card-img-top" alt="...">
+        </a>
       </div>
-      {{ end }}
-      {{ end }}
     </div>
-  </section>
+    {{ end }}
+    {{ end }}
+  </div>
+</section>
