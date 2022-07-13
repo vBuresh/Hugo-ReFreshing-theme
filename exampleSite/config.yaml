@@ -1,68 +1,103 @@
-languageCode: "en"
-title: "ReFreshing"
-# title: "cyberМїРъ"
-baseURL: https://example.com
+title: ReFreshing
+baseURL: https://mediabank.cybmir.ru
+theme: Hugo-ReFreshing
+languageCode: ru
+DefaultContentLanguage: ru
+disableLanguages: en
+# languageCode:           en
+# DefaultContentLanguage: en
+# disableLanguages:       ru
 
 enableInlineShortcodes: true
-publishDir: "@_site"
-enableRobotsTXT: false
 
 # bd5
 markup:
   goldmark:
     renderer:
-      unsafe:           true
+      unsafe: true
   highlight:
-    noClasses:          false
+    noClasses: false
   tableOfContents:
-    startLevel:         2
-    endLevel:           4
+    startLevel: 2
+    endLevel: 3
 
-# theme: hugo-refreshing
-# theme: ../..
-#########################################
-######## Uncomment this option ##########
-#########################################
-# This options specify where to look for the images used in this config
-# The default value is the "asset" directory of this theme
-# assetDir: "static"
+# Syntax Highlighting
+pygmentsUseClasses: true
 
-# Option to specify the default language of the theme
-# I.e., the landing language of your root
-# DefaultContentLanguage: en
-DefaultContentLanguage: "ru"
+enableRobotsTXT: false
+publishDir: @_public
 
-Taxonomies:
-  category: "categories"
-  tag: "tags"
+# применяются относительные ссылки. Тo turn relative URLs into absolute use
+# canonifyURLs:         true.
+canonifyURLs: false
 
 params:
-  # bs5 r44
-  description: "It's refreshing to see a site that's so glorious"
-  authors:  "wBuresh, ErFandor"
-    # parameter used to specify if you want to minify the imported js
-  jsMinify: false
-  # parameter used to specify if you want to minify the imported css
-  cssMinify: false
-  # parameter used to specify if you want to calculate the css integrity true
-  cssIntegrity: false
-  # parameter used to specify if you want to calculate the js integrity
-  jsIntegrity: false
-  # option to specify the main colour of the theme
-  mainColour: "#00D1B2"
+  # Brand
+  # logo:               "/images/logo_vvburesh.svg"
+  logo: /images/logoRFI_36.svg
+  #title:                lux
+  description: A one-page template for building simple and beautiful home pages.
+  # for meta
+  summary: Very nice template
+  authors: '@wburesh'
+  site_version: a4.0
+  favicon: /images/favicon.svg
 
-  # homepage options (c101)
+  # Баннер для карточек
+  defaultImage: /images/default-card_img-cybmir.svg
+  # Оptions
+
+  darkMode: true
+  # darkMode:           false
+
+  cssMinify: false
+  cssIntegrity: false
+  jsMinify: false
+  jsIntegrity: false
+
+  # option to specify the main colour of the theme
+
+  # mainColour:         "#F39200"
+  # mainColour:         "#00d1b2"
+  mainColour: '#33ccff'
+  # bs $primary, $secondary, $success, $warning, $light
+  # mainColour:         "#0d6efd"
+  # mainColour:         "#6c757d"
+  # mainColour:         "#198754"
+  # mainColour:         "#fd9c0d"
+  # mainColour:         "#f8f9fa"
+
+  # homepage options
   homepage:
     # this options let you specify if you want a link to the homepage
-    # it can be: "none", "menu", "footer" or "menu+footer"
-    # linkPosition: "footer"
+    # it can be:        "none", "menu", "footer" or "menu+footer"
+    # linkPosition:     "footer"
     # this options let you specify the text of the link to the homepage
-    # linkText: "Homepage"
+    # linkText:         "Homepage"
     # option to specify the title in the homepage
-    title: ReFreshing
+    title: Cyber-МїРъ
+    subtitle: Only one-page template for building simple and beautiful home pages.
     # option to specify the subtitle in the homepage
-    subtitle: It's refreshing to see a site with such a beautiful theme
-    # option to specify image in the homepage
-    image: "/images/avataaars.png" # worker.svg
-    # option to specify the width of the image in the homepage
-    imageWidth: 500px
+    summary: Download, edit the text, and add your own fullscreen background photo to make it your own.
+
+## multi language support options
+####################################
+languages:
+  en:
+    languageName: English
+    weight: 2
+    # title:            In English
+  ru:
+    languageName: Russian
+    # title:            На Русском
+    weight:
+      1
+      # Some sub-parameters of the "Homepage" and "footer" parameter
+    params:
+      homepage:
+        title: ReFreshing
+        subtitle: '— Золотая оправа для сайта'
+        summary: 'Отредактируйте текст, наполнив его короткой информацией о своем сайте. Чтобы оживить главную страницу добавьте свою собственную полноэкранную фоновую фотографию, чтобы сделать ее своей собственной.'
+      footer:
+        logo: /images/logoRFI.svg
+        title: 'Hugo-ReFreshing Theme ©'
