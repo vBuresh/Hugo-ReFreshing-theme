@@ -7,6 +7,9 @@
  <img src="{{ $image.RelPermalink }}" class="card-img-top" alt="Изображение в карточке">
   {{ end }}
 </a>
+<figcaption class="figure-caption">
+  {{- .Page.Params.banCaption -}}
+</figcaption>
 {{ else }}
   {{ $image = resources.Get .Site.Params.defaultImage }}
 <a href="{{ .RelPermalink }}">
