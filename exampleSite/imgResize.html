@@ -1,0 +1,15 @@
+{{ $img := .Page.Resources.GetMatch (printf "*%s*" (.Get 0)) }}
+{{ $imgSize := .Get 1 | default "850x" }}
+{{- $startEnd := .Get 2 | default "center" -}}
+{{/* <section class="imgtopframed my-5 text-center"> */}}
+  <div class="text-{{$startEnd}} imgtopframed my-3">
+    <div class="card border-0">
+      <figure>
+        {{ $img = $img.Resize $imgSize }}
+        <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}">
+        <figcaption class="figure-caption">
+          {{ .Page.Params.topPageimgCaption }}
+        </figcaption>
+      </figure>
+    </div>
+  </div>
