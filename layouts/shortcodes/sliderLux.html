@@ -1,26 +1,26 @@
 {{- $paddings := .Get 0 | default "py-3" -}}
-<section class="sliderlux-carousel {{ $paddings }}">
-  <div id="sliderluxCarousel" class="carousel slide" data-bs-ride="carousel">
+<section class="sladerlux {{ $paddings }}">
+  <div id="sladerluxControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="images/art-slade.jpg" class="d-block w-100" alt="...">
-      </div>
-      {{/* отбор всех изображений images/* только из директории images */}}
       {{ with .Page.Resources.Match "images/*" }}
+      <div class="carousel-item active">
+        <img src="images/art-slide.jpg" class="d-block w-100" alt="...">
+      </div>
       {{ range . }}
+      {{/* отбор всех изображений images/* только из директории images */}}
       <div class="carousel-item">
         <img src="{{ .RelPermalink }}" class="d-block w-100" alt="...">
       </div>
       {{ end }}
       {{ end }}
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#sliderluxCarousel" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#sladerluxControls" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
+      <span class="visually-hidden">{{ i18n "slidePrevious" }}</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#sliderluxCarousel" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#sladerluxControls" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
+      <span class="visually-hidden">{{ i18n "slideNext" }}</span>
     </button>
   </div>
 </section>

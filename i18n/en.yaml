@@ -1,52 +1,56 @@
 - id: cyberMiR
-  translation: "cMiP"
+  translation: 'cMiP'
 - id: leaf
-  translation: "Leaf"
+  translation: 'Leaf'
 - id: author
-  translation: "Author"
+  translation: 'Author'
 - id: readMore
-  translation: "Read more"
+  translation: 'Read more'
 - id: moreDetails
-  translation: "Details..."
+  translation: 'Details...'
 - id: mainMenu
-  translation: "Menu"
+  translation: 'Menu'
 - id: menuPosts
-  translation: "Letters"
+  translation: 'Letters'
 - id: menuHugo
-  translation: "Digits"
+  translation: 'Digits'
 - id: allTags
-  translation: "All Tags"
+  translation: 'All Tags'
 - id: newPublications
-  translation: "New publications"
+  translation: 'New publications'
 - id: categories
-  translation: "Categories"
+  translation: 'Categories'
 - id: allPublicationsTags
-  translation: "Все публикации (по тегам)"
+  translation: 'Все публикации (по тегам)'
 - id: tags
-  translation: "Tags"
+  translation: 'Tags'
 - id: postedOn
-  translation: "Posted on"
+  translation: 'Posted on'
 - id: lastModified
-  translation: "Last modified"
+  translation: 'Last modified'
 # FIXME - id: readingTime
 #   translation: "Reading Time {{.Count}} min."
 - id: words
-  translation: "words"
+  translation: 'words'
 - id: website
-  translation: "Website"
+  translation: 'Website'
 - id: credits
-  translation: "Credits"
+  translation: 'Credits'
 - id: copyright
-  translation: "Copyright"
+  translation: 'Copyright'
 - id: contacts
-  translation: "Contacts"
+  translation: 'Contacts'
 - id: homepage
-  translation: "Homepage"
+  translation: 'Homepage'
 - id: aboutProject
-  translation: "About project"
+  translation: 'About project'
 - id: editorialPolicy
-  translation: "Editorial policy"
+  translation: 'Editorial policy'
 - id: pageTOC
-  translation: "Table Of Contents"
+  translation: 'Table Of Contents'
+- id: slidePrevious
+  translation: 'Previous'
+- id: slideNext
+  translation: 'Next'
 # - id: darkMode
 #   translation: "Color Schemes: light / dark"
