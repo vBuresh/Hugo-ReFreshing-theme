@@ -1,19 +1,19 @@
 <div class="rfi-topBanner">
-{{ $image := "" }}
-{{ if .Page.Params.topBanner }}
-{{ $image = .Resources.GetMatch .Page.Params.topBanner }}
-<a href="{{ .RelPermalink}}">
-{{ with $image }}
- <img src="{{ $image.RelPermalink }}" class="card-img-top" alt="Изображение в карточке">
-  {{ end }}
-</a>
-<figcaption class="figure-caption">
-  {{- .Page.Params.banCaption -}}
-</figcaption>
-{{ else }}
+  {{ $image := "" }}
+  {{ if .Page.Params.topBanner }}
+  {{ $image = .Resources.GetMatch .Page.Params.topBanner }}
+  <a href="{{ .RelPermalink}}">
+    {{ with $image }}
+    <img src="{{ $image.RelPermalink }}" class="card-img-top" alt="Изображение в карточке">
+    {{ end }}
+  </a>
+  <figcaption class="figure-caption">
+    {{ .Page.Params.banCaption }}
+  </figcaption>
+  {{ else }}
   {{ $image = resources.Get .Site.Params.defaultImage }}
-<a href="{{ .RelPermalink }}">
- <img src="{{ $image.RelPermalink }}" class="card-img-top" alt="Изображение по умолчанию в карточке">
-</a>
-{{ end }}
+  <a href="{{ .RelPermalink }}">
+    <img src="{{ $image.RelPermalink }}" class="card-img-top" alt="Изображение по умолчанию в карточке">
+  </a>
+  {{ end }}
 </div>
