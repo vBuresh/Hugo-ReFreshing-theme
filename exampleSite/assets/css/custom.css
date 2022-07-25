@@ -1,11 +1,21 @@
 /* --customMainColour: var(--mainColour); */
 /* Пользовательские настройки */
-/* Подгонка меню под логотип*/
 
+/* стрелки "вперед-назад" в слайдере (карусели) */
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2333ccff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2333ccff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/* Подгонка меню под логотип*/
 .nav-scroller {
-  font-family:'Golos UI VF';
+  font-family: 'Golos UI VF';
   font-weight: 700;
-  margin-top: -.45rem;
+  margin-top: -0.45rem;
   padding-left: 3.725rem;
 }
 
@@ -15,10 +25,14 @@
 
 .navtopline {
   background: var(--rfi-veryDarkBlue);
-  background: linear-gradient(90deg, rgba(0,26,51,1) 0%, rgba(0,26,51,1) 40%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 26, 51, 1) 0%,
+    rgba(0, 26, 51, 1) 40%,
+    rgba(255, 255, 255, 1) 100%
+  );
   border-radius: 50px;
   height: 2px;
-  margin-bottom: .001rem;
+  margin-bottom: 0.001rem;
   width: 128px;
 }
-в
