@@ -1,8 +1,17 @@
 <nav class="nav nav-masthead">
-<a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasNavbarRFi" role="button" aria-controls="offcanvasNavbarRFi">
-<span class="fw-normal about-project">
-  {{ i18n "aboutProject" }}
-</span>
-{{ partial "svg/wb-tags-flip-h.svg" (dict "width" 18 "height" 18 ) }}
-</a>
+  <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasNavbarRFi" role="button"
+    aria-controls="offcanvasNavbarRFi">
+    <span class="fw-normal about-project">
+      {{ i18n "aboutProject" }}
+    </span>
+    <svg id="tags-flip-h" width="18" height="18" viewBox="0 0 16 16" aria-label="Sidebar Link">
+      <path fill="#003467"
+        d="m 12.585786,2 v 4.586 l -6.9999995,7 L 0.99978645,9 7.9997865,2 Z m 1,0 a -1,1 0 0 0 -1,-1 H 7.9997865 a -1,1 0 0 0 -0.707,0.293 l -7.00000005,7 a -1,1 0 0 0 0,1.414 l 4.58600005,4.586 a -1,1 0 0 0 1.414,0 l 6.9999995,-7 a -1,1 0 0 0 0.293,-0.707 z"
+        id="path2" />
+      <path fill="{{ .Site.Params.mainColour }}"
+        d="m 10.085786,5 a -0.5,0.5 0 1 0 0,-1 -0.5,0.5 0 0 0 0,1 z m 0,1 a -1.5,1.5 0 1 1 0,-3 -1.5,1.5 0 0 1 0,3 z m 4.5,1.086 a -1,1 0 0 1 -0.293,0.707 l -7.4569995,7.457 0.043,0.043 a -1,1 0 0 0 1.414,0 l 6.9999995,-7 a -1,1 0 0 0 0.293,-0.707 V 3 a -1,1 0 0 0 -1,-1 z"
+        id="path4" />
+    </svg>
+
+  </a>
 </nav>
