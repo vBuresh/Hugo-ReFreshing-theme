@@ -1,6 +1,6 @@
-{{- $rowcols := .Get 0 | default "row-cols-sm-3 row-cols-md-6" -}}
+{{- $classRFI := .Get 0 | default "row-cols-sm-3 row-cols-md-6" -}}
 <section class="gallerylux py-3">
-  <div class="row row-cols-1 {{ $rowcols }} g-1">
+  <div class="row row-cols-1 {{ $classRFI }} g-1">
     {{/* отбор изображений только *.jpg из директории images */}}
     {{ with .Page.Resources.Match "images/*" }}
     {{ range . }}
