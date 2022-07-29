@@ -19,7 +19,7 @@ markup:
     noClasses: false
   tableOfContents:
     startLevel: 2
-    endLevel: 3
+    endLevel: 4
 
 # Syntax Highlighting
 pygmentsUseClasses: true
