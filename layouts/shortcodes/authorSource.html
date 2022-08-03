@@ -1,0 +1,8 @@
+{{- /*
+Usage: `authorSource "type"`, where type is one of center or start (default: end)
+*/ -}}
+
+{{- $css_class := .Get 0 | default "end" -}}
+<p class="fst-italic text-muted text-{{ $css_class }}  mt-3">
+  {{ .Inner | markdownify }}
+</p>
