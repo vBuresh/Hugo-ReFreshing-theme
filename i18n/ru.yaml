@@ -27,7 +27,7 @@
 - id: postedOn
   translation: 'Опубликовано'
 - id: lastModified
-  translation: 'Последние изменения - от '
+  translation: 'с изменениями от '
 # FIXME: - id: readingTime
 #   translation: "Чтение займет до {{.Count}} мин."
 - id: words
