@@ -1,6 +1,4 @@
-/*!
-* Bootstrap v5.2.0-beta1 - кастомизация v003
-*/
+/*? Bootstrap v5.2.0-beta1 - кастомизация v003 */
 :root {
   --bs-font-sans-serif: 'Golos Text VF', 'Golos UI VF', system-ui, -apple-system,
     'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial,
@@ -86,8 +84,12 @@ figcaption {
   color: var(--bs-gray-600);
   text-align: right;
   font-style: italic;
-  margin-right: 0.25rem;
-  /* margin-top: .25rem */
+  margin-right: .5rem;
+  margin-top: .5rem;
+}
+
+figcaption p {
+  margin-top: .5rem;
 }
 
 table {
@@ -153,14 +155,14 @@ blockquote + .bd-callout,
 blockquote {
   background-color: var(--bs-gray-100);
   /* margin-left: 4rem; */
-  background-image: url("data:image/svg+xml,<svg viewBox='0 0 50 50' fill='%23adb5bd' xmlns='http://www.w3.org/2000/svg'><path d='M26.872 15.838c-5.576 1.496-9.114 4.608-10.613 9.276 1.38-2.155 3.358-3.232 5.936-3.232 1.979 0 3.598.658 4.977 1.975 1.319 1.316 2.039 2.992 2.039 4.967 0 1.915-.66 3.471-1.979 4.787-1.32 1.317-3.058 1.915-5.217 1.915-2.218 0-3.897-.718-5.157-2.094C15.6 31.995 15 30.08 15 27.627 15 21.224 18.898 16.974 26.752 15zm15.79 0c-5.576 1.496-9.114 4.608-10.613 9.276 1.379-2.155 3.357-3.232 5.936-3.232 1.978 0 3.597.658 4.977 1.975C44.28 25.173 45 26.85 45 28.824c0 1.915-.66 3.471-1.978 4.787-1.32 1.317-3.059 1.915-5.217 1.915-2.219 0-3.898-.718-5.157-2.094-1.259-1.437-1.859-3.351-1.859-5.805 0-6.403 3.898-10.653 11.753-12.627z'/></svg>");
+  background-image: url("data:image/svg+xml,<svg viewBox='0 -7 50 50' fill='%23adb5bd' xmlns='http://www.w3.org/2000/svg'><path d='M26.872 15.838c-5.576 1.496-9.114 4.608-10.613 9.276 1.38-2.155 3.358-3.232 5.936-3.232 1.979 0 3.598.658 4.977 1.975 1.319 1.316 2.039 2.992 2.039 4.967 0 1.915-.66 3.471-1.979 4.787-1.32 1.317-3.058 1.915-5.217 1.915-2.218 0-3.897-.718-5.157-2.094C15.6 31.995 15 30.08 15 27.627 15 21.224 18.898 16.974 26.752 15zm15.79 0c-5.576 1.496-9.114 4.608-10.613 9.276 1.379-2.155 3.357-3.232 5.936-3.232 1.978 0 3.597.658 4.977 1.975C44.28 25.173 45 26.85 45 28.824c0 1.915-.66 3.471-1.978 4.787-1.32 1.317-3.059 1.915-5.217 1.915-2.219 0-3.898-.718-5.157-2.094-1.259-1.437-1.859-3.351-1.859-5.805 0-6.403 3.898-10.653 11.753-12.627z'/></svg>");
   background-repeat: no-repeat;
   background-size: 2.2rem 2.2rem;
   color: var(--bs-black);
   font-size: 1.0725rem;
   font-style: italic;
   border-left-color: var(--bs-gray-500);
-  padding-left: 2.3em;
+  padding: 1rem 1rem 1rem 2.5rem;
 }
 
 blockquote i {
@@ -203,34 +205,6 @@ blockquote i::before {
 /*  Components */
 .rfi-navbaroff a {
   color: var(--bs-black);
-}
-
-/* bs-142 - для типа контента law отступы неприемлемы*/
-.doclaw ol,
-ul {
-  padding-left: 0;
-}
-
-.doctoc ol,
-ul {
-  padding-left: 1.2rem;
-}
-
-.doctoc a {
-  /* color: var(--rfi-aLinks); */
-  text-decoration: none;
-}
-
-.doctoc a:hover {
-  color: var(--mainColour);
-  /* color: var(--mainColour); */
-  text-decoration: none;
-}
-
-.doctoc .list-group-item:focus {
-  color: var(--rfi-aHover);
-  background-color: var(--bs-gray-100);
-  text-decoration: underline;
 }
 
 /*
@@ -283,6 +257,7 @@ Remember to update `_layouts/examples.html` too if this changes! */
 .description-lead,
 .highlight {
   margin-bottom: 1rem;
+  margin-top: .5rem;
 }
 
 /* bs240 */
@@ -716,7 +691,7 @@ pre,
   background-color: var(--bs-gray-100) !important;
 }
 
-[data-theme='dark'] .card-body {
+[data-theme='dark'] .card {
   background-color: var(--rfi-darkHugoBlue) !important;
   color: var(--bs-gray-200);
   border-color: var(--bs-gray-600);
@@ -758,7 +733,12 @@ pre,
   color: var(--bs-gray-200);
 }
 
-[data-theme='dark'] .list-group.doctoc a {
+[data-theme='dark'] .list-group li {
+  background-color: var(--rfi-darkHugoBlue);
+  color: var(--bs-gray-200);
+}
+
+[data-theme='dark'] .list-group a {
   background-color: var(--rfi-darkHugo);
   color: var(--bs-gray-200);
 }
@@ -771,11 +751,6 @@ pre,
 [data-theme='dark'] .list-group-item:hover,
 .list-group-item:focus {
   background-color: var(--rfi-verydarkHugo);
-  color: var(--mainColour);
-}
-
-[data-theme='dark'] .doctoc a:hover,
-.doctoc a:focus {
   color: var(--mainColour);
 }
 
