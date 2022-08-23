@@ -1,0 +1,23 @@
+{{- /*
+Usage: `youtube_2 "type" "videoId_one" "videoId_two"`
+*/ -}}
+
+{{- $videoId_one := .Get 0 | default "Eu4zSaKOY4A" -}}
+{{- $videoId_two := .Get 1 | default "Eu4zSaKOY4A" -}}
+
+<div class="row row-cols-1 row-cols-sm-2 g-4 pb-4">
+  <div class="col">
+    <div class="card h-100 border-0">
+      <div class="ratio ratio-16x9 mb-1">
+        <iframe src="https://www.youtube.com/embed/{{ $videoId_one }}" title="YouTube video" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 border-0">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/{{ $videoId_two }}" title="YouTube video" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>

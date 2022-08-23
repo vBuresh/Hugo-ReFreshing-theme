@@ -1,0 +1,12 @@
+{{- /*
+По умолчанию включает поддержку 25%, 50%, 75%, 100% и auto
+Usage: `imgFloat "type" "imgFileName_one" "right"`
+*/ -}}
+{{ $imgFileName_one := .Get 0 }}
+{{ $videoFloat := .Get 1 }}
+
+<div class="w-50 float-{{ $videoFloat }}">
+  <div class="card border-0 mb-3">
+    <img src="images/{{ $imgFileName_one }}" class="card-img-top" alt="...">
+  </div>
+</div>

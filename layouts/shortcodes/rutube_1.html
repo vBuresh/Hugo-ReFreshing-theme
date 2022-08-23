@@ -1,0 +1,14 @@
+{{- /*
+Usage: `youtube_2 "type" "videoId_one" "right"`
+*/ -}}
+
+{{- $videoId_one := .Get 0 | default "75757f5121131ca1d57b721eb15c358c" -}}
+{{- $videoFloat := .Get 1 -}}
+
+<div class="w-50 float-{{ $videoFloat }}">
+  <div class="card border-0">
+    <div class="ratio ratio-16x9 mb-1">
+      <iframe src="https://rutube.ru/play/embed/{{ $videoId_one }}" title="YouTube video" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
