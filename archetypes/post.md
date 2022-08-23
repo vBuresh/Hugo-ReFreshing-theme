@@ -2,7 +2,7 @@
 title: {{ replace .Name "-" " " | title }}
 # subtitle: continuer of the title in a two words
 date: {{ .Date }}
-Lastmod: {{ .Date }}
+# Lastmod: {{ .Date }}
 draft: false
 # description: '-announce text'
 # summary: '68 symbols only'
