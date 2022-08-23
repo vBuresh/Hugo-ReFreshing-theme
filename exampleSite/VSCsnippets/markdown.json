@@ -1,0 +1,200 @@
+{
+  // /home/w/.config/VSCodium/User/snippets
+  // home/w/.config/VSCodium/User/snippets
+  // Расположите сниппеты для markdown здесь. Каждый сниппет определяется именем сниппета и имеет
+    // префикс (prefix), тело (body) и описание (description).
+  	// Префикс — это то, что используется для запуска сниппета, и body будет расширено и вставлено. Доступны следующие переменные:
+  	// $1, $2 для смены позиции курсора (табуляция), $0 для остановки курсора на завершающей позиции,
+  	// и ${1:label}, ${2:another} для шаблонов заполнения (заполнители). Заполнители с одинаковыми идентификаторами связаны.
+  	// Пример:
+  // Example:
+  // "Print to console": {
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "imgFloating": {
+    "prefix": "vv-imgFloating",
+    "body": [
+      "{{< imgFloating \"${1|images/,https://,./|}${2:имя-или-адрес_файла}\" \"${3|mx-auto d-block,float-end ms-3,float-start me-3|}\" ${4|100,50,75,25|} \"${5:— «подрисуночныйТекст»}\" >}}",
+      "\n$0"
+    ],
+    "description": "Вставить в текст изображение, c и изменяемыми шириной, обтеканием и отступами. Их требуется указать после имени файла"
+  },
+  "imgFloat": {
+    "prefix": "vv-imgFloat",
+    "body": [
+      "{{< imgFloat \"${1:вставить_имя_файла}\" \"${2|end ms-3,start me-3|}\" >}}",
+      "\n$0"
+    ],
+    "description": "Вставить в текст изображение, шириной 50% и изменяемыми обтеканием и отступами. Требуется указать только имя файла и сторону выравнивания"
+  },
+  "imgCard_2": {
+    "prefix": "vv-imgCard_2",
+    "body": [
+      "{{< imgCard_2 \"${1:imgFileName_1}\" \"${2:imgFileName_2}\" >}}",
+      "\n$0"
+    ],
+    "description": "Вставить в текст два изображения в одну строку. Достаточно указать только имена файлов"
+  },
+  "imgCard_2-txt": {
+    "prefix": "vv-imgCard_2-txt",
+    "body": [
+      "{{< imgCard_2-txt \"${1:imgFileName_1}\" \"${2:— «Имя» (фрагм. 1)}\" \"${3:imgFileName_2}\" \"${4:— «Имя» (фрагм. 2)}\" >}}",
+      "\n$0"
+    ],
+    "description": "Вставить в текст два изображения в одну строку. Достаточно указать только имена файлов"
+  },
+  "rutube_1": {
+    "prefix": "vv-rutube_1",
+    "body": [
+      "{{< rutube_1 \"${1:видеоID}\" \"${2|end ms-3,start me-3|}\" >}}",
+      "\n$0"
+    ],
+    "description": "Встроить в текст RuTube-видео, шириной 50% и изменяемыми обтеканием и отступами. Требуется указать только их ID (обязательно в кавычках)"
+  },
+  "youtube_1": {
+    "prefix": "vv-youtube_1",
+    "body": [
+      "{{< youtube_1 \"${1:видеоID}\" \"${2|end ms-3,start me-3|}\" >}}",
+      "\n$0"
+    ],
+    "description": "Встроить в текст YouTube-видео, шириной 50% и изменяемыми обтеканием и отступами. Требуется указать только их ID (обязательно в кавычках)"
+  },
+  "youtube_2": {
+    "prefix": "vv-youtube_2",
+    "body": [
+      "{{< youtube_2 \"${1:видеоID_1}\" \"${2:видеоID_2}\" >}}",
+      "\n$0"
+    ],
+    "description": "Встроить в текст строку с двумя YouTube-видео. Требуется указать только их ID (обязательно в кавычках)"
+  },
+  "list-groupRFI": {
+    "prefix": "vv-list-groupRFI",
+    "body": [
+      "{{< list-group ${1|text-bg-info,text-bg-primary,text-bg-danger,text-bg-warning,text-bg-secondary,text-bg-success,text-bg-dark|}>}}",
+      "${2:ВставитьСписок}",
+      " {{< /list-group >}}",
+      "\n$0"
+    ],
+    "description": "Списки RFI с возможностью изменять оформление (стили). При указании нескольких переключателей - заключить в скобки обязательно, разделять - пробелом"
+  },
+  "callout-cite": {
+    "prefix": "vv-calloutCite",
+    "body": [
+      "{{< callout ${1|danger,warning,secondary|} >}}",
+      "${2:Вставить текст}",
+      " {{< /callout >}}",
+      "\n$0"
+    ],
+    "description": "Цитаты, замечания, предупреждения комментарии."
+  },
+  "cite-author-source": {
+    "prefix": "vv-cite-author-source",
+    "body": [
+      "{{< authorSource ${1:АвторИсточник} \"[${2:Наименование}](${3:https://})\" ${4:комментарии} >}}",
+      "\n$0"
+    ],
+    "description": "добавление источника цитаты"
+  },
+  "codeExPlus": {
+    "prefix": "vv-codeExamplePlus",
+    "body": [
+      "```${1|bash,go,go-html-template,css,json|} {linenos=table,hl_lines=[${2:1} \"${3:2-3}\"],linenostart=${4:1}} ",
+     "$0",
+     "```"
+    ],
+    "description": "Пример кода c нумерацией строк, указанием начала нумерации и выделением отдельных строк."
+  },
+  "codeEx": {
+    "prefix": "vv-codeExample",
+    "body": [
+      "```${1|bash,go,go-html-template,scc,json|}",
+     "${2:Вставить}",
+     "```"
+    ],
+    "description": "Пример кода"
+  },
+  "dayBYday": {
+    "prefix": "vv-dayBYday",
+    "body": [
+      "## $CURRENT_DATE августа {#$CURRENT_YEAR$CURRENT_MONTH$CURRENT_DATE}",
+      "{{< leafDay >}}${1|понедельник,вторник,среда,четверг,пятница,суббота,воскресенье|}, $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND {{< /leafDay >}}",
+      "\n$0"
+    ],
+    "description": "Мои листики"
+  },
+  "date by Hugo": {
+    "prefix": "vv-dateHugo",
+    "body": [
+      "$CURRENT_YEAR-$CURRENT_MONTH-${CURRENT_DATE}T$CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND+03:00"
+    ],
+    "description": "Add Hugo template current date & time"
+  },
+  "date and time": {
+    "prefix": "vv-dateAndTime",
+    "body": [
+      "$CURRENT_YEAR.$CURRENT_MONTH.${CURRENT_DATE} $CURRENT_HOUR:$CURRENT_MINUTE"
+    ],
+    "description": "Add Current date & time"
+  },
+  "date and time brief": {
+    "prefix": "vv-dateTimeBrief",
+    "body": [
+      "$CURRENT_YEAR$CURRENT_MONTH${CURRENT_DATE}${1:-$CURRENT_HOUR$CURRENT_MINUTE}"
+    ],
+    "description": "Add brief current date & time"
+  },
+  "Insert table": {
+    "prefix": "vv-table",
+    "body": [
+      "| ${1:Шапка-1} | ${2:Шапка-2}  | ${3:Шапка-3}  |",
+      "| ------- | -------- | -------- |",
+      "| ${4:Текст-1} | ${5:Текст-1}  | ${6:Текст-1}  |",
+      "\n${0}"
+    ],
+    "description": "Это таблица. Просто нужно ввести заголовки столбцов, переходя из ячейки в ячейку клавишей Tab. Затем можно приступить к заполнению ячеек."
+  },
+  "img-galleryLux": {
+    "prefix": "vv-img-galleryLux",
+    "body": [
+      "{{< galleryLux ${1|row-cols-md-4,row-cols-md-3,row-cols-md-2,row-cols-md-1,row-cols-md-5,row-cols-md-6|} >}}",
+      "${0}"
+    ],
+    "description": "Выводит все изображения из директории images в таблицу изображений. Можно указать количество столбцов этой таблицы и другие классы, помещая все это в кавычки."
+  },
+  "sliderLux": {
+    "prefix": "vv-img-sliderLux",
+    "body": [
+      "{{< sliderLux ${1|py-5,py-4,py-0|} >}}",
+      "${0}"
+    ],
+    "description": "Выводит все изображения из директории images в слайдер (карусель). Отступы по вертикали по умолчанию py-3 - можно выбрать другой изменить."
+  },
+  "img-procsessing": {
+    "prefix": "vv-img-procsessing",
+    "body": [
+      "{{< hugo-rfi_imgproc ${1:вставить_имя_файла} ${2|Resize, Crop, Fit, Fill|} ${3|\"300x\",\"x300\",\"300x300\"|} >}}",
+      "${0}"
+    ],
+    "description": "Производит обработку указанного изображения директории и выводит его на место шорткода."
+  },
+  "img-figure": {
+    "prefix": "vv-img-figure",
+    "body": [
+      "{{< figure src=\"images/${1:имя_файла}\" width=\"${2:100}%\" caption=\"${3:Подрисуночная подпись}\" attr=${4:\"Источник\"} attrlink=\"${5:https://}\" >}}",
+      "${0}"
+    ],
+    "description": "Встроенный шорткод Hugo. Модернизированный"
+  },
+  "div-class": {
+    "prefix": "vv-div-class",
+    "body": [
+      "<div class=\"${1:вставить_классы}\">$0</div>"
+    ],
+    "description": "Добавление слоя"
+  }
+}
