@@ -1,13 +1,14 @@
 {{ define "main" }}
 <section>
-  <header class="my-3">
-    <h1>{{ .Title }}
+  <header class="my-auto">
+    <h1 class="mb-1">{{ .Title }}
       {{ if .Page.Params.subtitle }}
       <small class="text-muted">
         {{ .Page.Params.subtitle }}
       </small>
       {{ end }}
     </h1>
+    <div class="divider"></div>
     {{ if eq .Layout "gallery" }}
     {{ if .Page.Params.topPageimg }}
     {{ partial "topPageimg" . }}
@@ -21,7 +22,6 @@
       {{ end }}
     </div>
     {{ else }}
-    <div class="divider"></div>
     {{ if .Page.Params.topPageimg }}
     {{- partial "topPageimg" . -}}
     {{ end }}
