@@ -1,9 +1,9 @@
 {{ define "main" }}
-<section>
+<section class="mt-3">
   {{ if .Page.Params.topPageimg }}
   {{ partial "topPageimg" . -}}
   {{ end }}
-  <header class="my-3">
+  <header class="my-4">
     <h1>{{ .Title }}
       {{ if .Page.Params.subtitle }}
       <small class="text-muted">
@@ -11,6 +11,7 @@
       </small>
       {{ end }}
     </h1>
+    <div class="divider"></div>
     <div class="description-lead">
       {{ .Description }}
       {{ if .Page.Params.announce }}
