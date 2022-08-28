@@ -1,18 +1,16 @@
-<div class="row justify-content-center rfi-toprageimg">
+{{ $image := "" }}
+{{ if .Page.Params.topPageimg }}
+<div class="row justify-content-center mt-4">
   <div class="col-md-auto">
-    <div class="card border-0">
-      {{ $image := "" }}
-      {{ if .Page.Params.topPageimg }}
       <figure>
         {{ $image = .Resources.GetMatch .Page.Params.topPageimg }}
         {{ with $image }}
         <img src="{{ .RelPermalink }}" class="figure-img img-fluid" alt="Главное изображение страницы">
         {{ end }}
-        <figcaption class="figure-caption">
+        <figcaption class="figure-caption mt-2">
           {{ .Page.Params.topPageimgCaption }}
         </figcaption>
       </figure>
-      {{ end }}
     </div>
   </div>
-</div>
+  {{ end }}
