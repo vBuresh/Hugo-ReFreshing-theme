@@ -1,19 +1,35 @@
 {{- /*
-По умолчанию включает поддержку 25%, 50%, 75%, 100% и auto
-Usage: `imgFloat "type" "imgFileName_one" "right"`
+Позволяет изменять цвет фона триптиха и добавлять подрисуночный текст, со ссылками."`
 */ -}}
 {{ $imgFileName_one := .Get 0 }}
-{{ $imgFloat := .Get 1 }}
-{{ $imgWidth := .Get 2 }}
-{{ $imgTxt_One := .Get 3 }}
+{{ $imgFileName_two := .Get 1 }}
+{{ $imgFileName_three := .Get 2 }}
+{{ $bgСolor := .Get 3 }}
+{{ $imgTxt := .Get 4 }}
 
-<div class="{{ $imgFloat }} w-{{ $imgWidth }}">
-  <figure>
-    <a href="{{ $imgFileName_one }}">
-      <img src="{{ $imgFileName_one }}" class="card-img-top" alt="...">
-    </a>
-    <figcaption class="figure-caption mt-1">
-      {{ $imgTxt_One }}
+<div class="row row-cols-1 row-cols-sm-3 g-4 pb-4 mt-3 px-3" style="background-color:{{ $bgСolor }}">
+  <div class="col align-self-center">
+    <div class="card h-100 border-0">
+      <a href="images/{{ $imgFileName_one }}">
+        <img src="images/{{ $imgFileName_one }}" class="card-img-top rounded-0" alt="...">
+      </a>
+    </div>
+  </div>
+  <div class="col align-self-center">
+    <div class="card h-100 border-0">
+      <a href="images/{{ $imgFileName_two }}">
+        <img src="images/{{ $imgFileName_two }}" class="card-img-top rounded-0" alt="...">
+      </a>
+    </div>
+  </div>
+  <div class="col align-self-center">
+    <div class="card h-100 border-0">
+      <a href="images/{{ $imgFileName_three }}">
+        <img src="images/{{ $imgFileName_three }}" class="card-img-top rounded-0" alt="...">
+      </a>
+    </div>
+    </div>
+    </div>
+    <figcaption class="figure-caption mt-1 mb-3">
+      {{ $imgTxt }}
     </figcaption>
-  </figure>
-</div>

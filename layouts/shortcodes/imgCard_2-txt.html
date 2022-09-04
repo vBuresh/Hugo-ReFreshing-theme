@@ -10,7 +10,9 @@ Usage: `imgCard_2-txt "type" "imgFileName_one" "imgTxt_One" "imgFileName_two" "i
 <div class="row row-cols-1 row-cols-sm-2 g-4 pb-4">
   <div class="col">
     <div class="card h-100 border-0">
+      <a href="images/{{ $imgFileName_one }}">
       <img src="images/{{ $imgFileName_one }}" class="card-img-top" alt="...">
+      </a>
       <div class="card-body text-end">
         <p class="card-text"><small class="text-muted">{{ $imgTxt_One }}</small></p>
       </div>
@@ -18,7 +20,9 @@ Usage: `imgCard_2-txt "type" "imgFileName_one" "imgTxt_One" "imgFileName_two" "i
   </div>
   <div class="col">
     <div class="card h-100 border-0">
+      <a href="images/{{ $imgFileName_two }}">
       <img src="images/{{ $imgFileName_two }}" class="card-img-top" alt="...">
+      </a>
       <div class="card-body">
         <p class="text-end"><small class="text-muted">{{ $imgTxt_Two }}</small></p>
       </div>
