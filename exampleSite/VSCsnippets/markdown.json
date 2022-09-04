@@ -1,21 +1,22 @@
 {
-  // /home/w/.config/VSCodium/User/snippets
-  // home/w/.config/VSCodium/User/snippets
-  // Расположите сниппеты для markdown здесь. Каждый сниппет определяется именем сниппета и имеет
-    // префикс (prefix), тело (body) и описание (description).
-  	// Префикс — это то, что используется для запуска сниппета, и body будет расширено и вставлено. Доступны следующие переменные:
-  	// $1, $2 для смены позиции курсора (табуляция), $0 для остановки курсора на завершающей позиции,
-  	// и ${1:label}, ${2:another} для шаблонов заполнения (заполнители). Заполнители с одинаковыми идентификаторами связаны.
-  	// Пример:
-  // Example:
-  // "Print to console": {
-  // 	"prefix": "log",
-  // 	"body": [
-  // 		"console.log('$1');",
-  // 		"$2"
-  // 	],
-  // 	"description": "Log output to console"
-  // }
+  "bQcite": {
+    "prefix": "vv-bQcite",
+    "body": [
+      "{{< bQcite \"${1|col-6,col-5,col-7,col-8,col-12|}\" \"${2:Автор}\" \"«${3:Произведение}» ${4:что-то ещё}\" \"${5:Источник}\" \"${6|https://,https://artelenlux.ru,https://cybmir.ru|}\">}}",
+      "${7:Вставить текст цитаты}",
+      "{{< /bQcite >}}",
+      "\n$0"
+    ],
+    "description": "Вставить в указанное место текста три изображения в одну строку. Достаточно указать только имена файлов"
+  },
+  "imgTriptych": {
+    "prefix": "vv-imgTriptych",
+    "body": [
+      "{{< imgTriptych \"${1:имяФайла}\" \"${2:имяФайла}\" \"${3:имяФайла}\" \"${4|#0a1922;,#50494e;,#040b0e;|}\" \"${5:— Триптих «Имя»}\" >}}",
+      "\n$0"
+    ],
+    "description": "Вставить в указанное место текста три изображения в одну строку. Достаточно указать только имена файлов"
+  },
   "imgFloating": {
     "prefix": "vv-imgFloating",
     "body": [
@@ -67,7 +68,7 @@
   "youtube_2": {
     "prefix": "vv-youtube_2",
     "body": [
-      "{{< youtube_2 \"${1:видеоID_1}\" \"${2:видеоID_2}\" >}}",
+      "{{< youtube_2 \"${1:видеоID_1}\" \"${2:Текст_1}\" \"${3:видеоID_2}\" \"${2:Текст_2}\" >}}",
       "\n$0"
     ],
     "description": "Встроить в текст строку с двумя YouTube-видео. Требуется указать только их ID (обязательно в кавычках)"
@@ -104,8 +105,8 @@
     "prefix": "vv-codeExamplePlus",
     "body": [
       "```${1|bash,go,go-html-template,css,json|} {linenos=table,hl_lines=[${2:1} \"${3:2-3}\"],linenostart=${4:1}} ",
-     "$0",
-     "```"
+      "$0",
+      "```"
     ],
     "description": "Пример кода c нумерацией строк, указанием начала нумерации и выделением отдельных строк."
   },
@@ -113,16 +114,16 @@
     "prefix": "vv-codeExample",
     "body": [
       "```${1|bash,go,go-html-template,scc,json|}",
-     "${2:Вставить}",
-     "```"
+      "${2:Вставить}",
+      "```"
     ],
     "description": "Пример кода"
   },
   "dayBYday": {
     "prefix": "vv-dayBYday",
     "body": [
-      "## $CURRENT_DATE августа {#$CURRENT_YEAR$CURRENT_MONTH$CURRENT_DATE}",
-      "{{< leafDay >}}${1|понедельник,вторник,среда,четверг,пятница,суббота,воскресенье|}, $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND {{< /leafDay >}}",
+      "## $CURRENT_DATE сентября {#$CURRENT_YEAR$CURRENT_MONTH$CURRENT_DATE}",
+      "\n{{< leafDay >}}${1|понедельник,вторник,среда,четверг,пятница,суббота,воскресенье|}, $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND {{< /leafDay >}}",
       "\n$0"
     ],
     "description": "Мои листики"
