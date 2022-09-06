@@ -1,31 +1,38 @@
-{{ $imgTxt_One := .Get 0 | default "Какие слайды!" }}
-{{ $slideWidth := .Get 1 | default "w-100" }}
-{{ $margins := .Get 2 | default "mt-0 mb-3" }}
+{{ $sladerluxID := .Get 0 | default "_1" }}
+{{ $slideWidth := .Get 1 | default "d-block w-100" }}
+{{ $colorBTN := .Get 2 | default "#33ccff" }}
+{{ $carouselTxt := .Get 3 }}
 <section class="sladerlux mt-0 mb-3 ">
-  <div id="sladerluxControls" class="carousel slide" data-bs-ride="carousel">
+  <div id="sladerlux{{ $sladerluxID }}" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       {{ with .Page.Resources.Match "images/*" }}
       <div class="carousel-item active">
-        <img src="images/art-slide.jpg" class="d-block w-100" alt="...">
+        <img src="images/art-slide.jpg" class="{{ $slideWidth }}" alt="...">
       </div>
       {{ range . }}
       {{/* отбор всех изображений images/* только из директории images w-auto*/}}
-      <div class="carousel-item text-center">
-        <img src="{{ .RelPermalink }}" class="d-block w-100" alt="...">
+      <div class="carousel-item">
+        <div class="text-center">
+          <img src="{{ .RelPermalink }}" class="{{ $slideWidth }}" alt="...">
+        </div>
       </div>
       {{ end }}
     </div>
     {{ end }}
     <figcaption class="figure-caption mt-1">
-      {{ $imgTxt_One }}
+      {{ $carouselTxt }}
     </figcaption>
-    <button class="carousel-control-prev" type="button" data-bs-target="#sladerluxControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">{{ i18n "slidePrevious" }}</span>
+    <button class="carousel-control-prev" type="button" data-bs-target="#sladerlux{{ $sladerluxID }}" data-bs-slide="prev">
+      <svg xmlns='http://www.w3.org/2000/svg' width="32" height="32" viewBox='0 0 16 16' fill="{{ $colorBTN }}">
+        <path
+          d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z">
+          <svg>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#sladerluxControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">{{ i18n "slideNext" }}</span>
+    <button class="carousel-control-next" type="button" data-bs-target="#sladerlux{{ $sladerluxID }}" data-bs-slide="next">
+      <svg xmlns='http://www.w3.org/2000/svg' width="32" height="32" viewBox='0 0 16 16' fill="{{ $colorBTN }}">
+        <path
+          d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+          <svg>
     </button>
   </div>
 </section>
