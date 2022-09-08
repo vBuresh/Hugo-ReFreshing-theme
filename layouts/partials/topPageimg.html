@@ -1,13 +1,13 @@
 {{ $image := "" }}
 {{ if .Page.Params.topPageimg }}
-<div class="row justify-content-center mt-4">
+<div class="row justify-content-center mt-1">
   <div class="col-md-auto">
       <figure>
         {{ $image = .Resources.GetMatch .Page.Params.topPageimg }}
         {{ with $image }}
         <img src="{{ .RelPermalink }}" class="figure-img img-fluid" alt="Главное изображение страницы">
         {{ end }}
-        <figcaption class="figure-caption mt-2">
+        <figcaption class="figure-caption mt-1">
           {{ .Page.Params.topPageimgCaption }}
         </figcaption>
       </figure>
