@@ -1,0 +1,8 @@
+<!-- usage: < cultrf/4139 moyarossia/3445 >  -->
+{{ $imgFloat := .Get 0 }}
+{{ $channel := .Get 1 }}
+{{ $id := .Get 2 }}
+<div class="{{$imgFloat}} mb-3">
+  <script async src="https://telegram.org/js/telegram-widget.js?19" data-telegram-post="{{$channel}}{{$id}}" data-width="100%"
+    data-userpic="true" data-color="33CCFF" data-dark="1"></script>
+</div>
