@@ -1,0 +1,41 @@
+{{ define "main" }}
+<section>
+  <header class="my-auto">
+    <h1 class="mb-1">{{ .Title }}
+      {{ if .Page.Params.subtitle }}
+      <small class="text-muted">
+        {{ .Page.Params.subtitle }}
+      </small>
+      {{ end }}
+    </h1>
+    <div class="divider"></div>
+    {{ if eq .Layout "gallery" }}
+    {{ if .Page.Params.topPageimg }}
+    {{ partial "topPageimg" . }}
+    {{ end }}
+    <!-- Gallery: artGallery / artGalleryImages  -->
+    {{ partial "artGalleryImages" . }}
+    <div class="description-lead mt-5">
+      {{ .Description | truncate 160 }}
+      {{ if .Page.Params.announce }}
+      {{ .Page.Params.announce }}
+      {{ end }}
+    </div>
+    {{ else }}
+    {{ if .Page.Params.topPageimg }}
+    {{- partial "topPageimg" . -}}
+    {{ end }}
+    <div class="description-lead">
+      {{ .Description | truncate 160 }}
+      {{ if .Page.Params.announce }}
+      {{ .Page.Params.announce }}
+      {{ end }}
+    </div>
+    {{- partial "author" . -}}
+    {{- partial "toc-collapse" . -}}
+  </header>
+  {{ end }}
+
+  {{ .Content }}
+</section>
+{{ end }}
