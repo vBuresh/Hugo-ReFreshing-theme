@@ -1,0 +1,31 @@
+{{- /*
+Usage: `imgDiptych "type" "imgFileName_one" "imgTxt_One" "imgFileName_two" "imgTxt_two"`
+*/ -}}
+
+{{ $imgFileName_one := .Get 0 }}
+{{ $imgTxt_One := .Get 1 }}
+{{ $imgFileName_two := .Get 2 }}
+{{ $imgTxt_Two := .Get 3 }}
+
+<div class="row row-cols-1 row-cols-sm-2 g-2 pb-4">
+  <div class="col">
+    <div class="card h-100 border-0">
+      <a href="images/{{ $imgFileName_one }}">
+        <img src="images/{{ $imgFileName_one }}" class="card-img-top rounded-0" alt="...">
+      </a>
+      <div class="card-body text-end">
+        <p class="card-text mb-0"><small class="text-muted">{{ $imgTxt_One }}</small></p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 border-0">
+      <a href="images/{{ $imgFileName_two }}">
+        <img src="images/{{ $imgFileName_two }}" class="card-img-top rounded-0" alt="...">
+      </a>
+      <div class="card-body text-end">
+        <p class="card-text mb-0"><small class="text-muted">{{ $imgTxt_Two }}</small></p>
+      </div>
+    </div>
+  </div>
+</div>

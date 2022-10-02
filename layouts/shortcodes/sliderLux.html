@@ -7,7 +7,7 @@
     <div class="carousel-inner">
       {{ with .Page.Resources.Match "images/*" }}
       <div class="carousel-item active">
-        <img src="images/art-slide.jpg" class="{{ $slideWidth }}" alt="...">
+        <img src="images/art-slide.webp" class="{{ $slideWidth }}" alt="...">
       </div>
       {{ range . }}
       {{/* отбор всех изображений images/* только из директории images w-auto*/}}

@@ -1,0 +1,14 @@
+{{ $audioFileName_one := .Get 0 }}
+{{ $audioTxt_One := .Get 1 }}
+
+<div class="float-start w-50">
+  <figure>
+    <audio controls src="{{ $audioFileName_one }}">
+      Your browser does not support the
+      <code>audio</code> element.
+    </audio>
+    <figcaption class="figure-caption text-center mt-1">
+      {{ $audioTxt_One }}
+    </figcaption>
+  </figure>
+</div>

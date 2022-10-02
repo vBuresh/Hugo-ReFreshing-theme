@@ -1,0 +1,11 @@
+{{/* См. примеры:
+https://discourse.gohugo.io/t/playing-audio-files/21117
+https://www.johnarroyo.com/2021/02/adding-audio-to-hugo/
+*/}}
+<figure {{ with .Get "class" }}class="{{ . }}" {{ end }}>
+  <audio controls preload="{{ .Get " preload" | default "metadata" }}">
+    {{ with .Get "src" }}
+    <source src="{{ . | relURL }}" type="audio/mpeg">{{ end }}
+  </audio>
+  {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
