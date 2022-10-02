@@ -1,4 +1,30 @@
 {
+  "dayBYday": {
+    "prefix": "vv-dayBYday",
+    "body": [
+      "## $CURRENT_DATE октября {#$CURRENT_YEAR$CURRENT_MONTH$CURRENT_DATE}",
+      "\n{{< leafDay >}}${1|понедельник,вторник,среда,четверг,пятница,суббота,воскресенье|}, $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND {{< /leafDay >}}",
+      "\n$0"
+    ],
+    "description": "Мои листики"
+  },
+  "snoska": {
+    "prefix": "vv-snoska",
+    "body": [
+     "<sup>[1](#${1:вставитьID})</sup>",
+     "<sup id=\"${1:вставитьID}\">[1]</sup>",
+      "\n$0"
+    ],
+    "description": "Сноски"
+  },
+      "audioRFI": {
+    "prefix": "vv-audioRFI",
+    "body": [
+      "{{< audioRFI \"${1:вставить_имя_файла}\" \"${2:Автор}\" \"${3|https://,https://artelenlux.ru,https://cybmir.ru|}\">}}",
+      "\n$0"
+    ],
+    "description": "Вставить в текст изображение, шириной 50% и изменяемыми обтеканием и отступами. Требуется указать только имя файла и сторону выравнивания"
+  },
   "bQcite": {
     "prefix": "vv-bQcite",
     "body": [
@@ -16,6 +42,14 @@
       "\n$0"
     ],
     "description": "Вставить в указанное место текста три изображения в одну строку. Достаточно указать только имена файлов"
+  },
+  "telegram": {
+    "prefix": "vv-telegram",
+    "body": [
+      "{{< telegram \"${1|mx-auto d-block,float-end ms-3,float-start me-3|}\" \"${2:канал}/${3:id_сообщения}\" >}}",
+      "\n$0"
+    ],
+    "description": "Вставить в текст изображение, c и изменяемыми шириной, обтеканием и отступами. Их требуется указать после имени файла"
   },
   "imgFloating": {
     "prefix": "vv-imgFloating",
@@ -41,10 +75,10 @@
     ],
     "description": "Вставить в текст два изображения в одну строку. Достаточно указать только имена файлов"
   },
-  "imgCard_2-txt": {
-    "prefix": "vv-imgCard_2-txt",
+  "imgDiptych": {
+    "prefix": "vv-imgDiptych",
     "body": [
-      "{{< imgCard_2-txt \"${1:imgFileName_1}\" \"${2:— «Имя» (фрагм. 1)}\" \"${3:imgFileName_2}\" \"${4:— «Имя» (фрагм. 2)}\" >}}",
+      "{{< imgDiptych \"${1:imgFileName_1}\" \"${2:— «Имя» (фрагм. 1)}\" \"${3:imgFileName_2}\" \"${4:— «Имя» (фрагм. 2)}\" >}}",
       "\n$0"
     ],
     "description": "Вставить в текст два изображения в одну строку. Достаточно указать только имена файлов"
@@ -118,15 +152,6 @@
       "```"
     ],
     "description": "Пример кода"
-  },
-  "dayBYday": {
-    "prefix": "vv-dayBYday",
-    "body": [
-      "## $CURRENT_DATE сентября {#$CURRENT_YEAR$CURRENT_MONTH$CURRENT_DATE}",
-      "\n{{< leafDay >}}${1|понедельник,вторник,среда,четверг,пятница,суббота,воскресенье|}, $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND {{< /leafDay >}}",
-      "\n$0"
-    ],
-    "description": "Мои листики"
   },
   "date by Hugo": {
     "prefix": "vv-dateHugo",
