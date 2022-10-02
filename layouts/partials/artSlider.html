@@ -1,0 +1,31 @@
+<section class="sladerlux mt-0 mb-3 ">
+    <div id="artSladerTop" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            {{ with .Page.Resources.Match "images/*" }}
+            <div class="carousel-item active">
+                <img src="images/art-slide.jpg" class="d-block w-100" alt="...">
+            </div>
+            {{ range . }}
+            {{/* отбор всех изображений images/* только из директории images w-auto*/}}
+            <div class="carousel-item">
+                <div class="text-center">
+                    <img src="{{ .RelPermalink }}" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
+        <button class="carousel-control-prev" type="button" data-bs-target="#artSladerTop" data-bs-slide="prev">
+            <svg xmlns='http://www.w3.org/2000/svg' width="32" height="32" viewBox='0 0 16 16' fill="#ffcc33">
+                <path
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z">
+                    <svg>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#artSladerTop" data-bs-slide="next">
+            <svg xmlns='http://www.w3.org/2000/svg' width="32" height="32" viewBox='0 0 16 16' fill="#ffcc33">
+                <path
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                    <svg>
+        </button>
+    </div>
+</section>
