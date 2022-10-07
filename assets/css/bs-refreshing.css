@@ -127,6 +127,10 @@ blockquote,
   border-left-width: 0.2rem;
 }
 
+blockquote {
+  border-left-width: 0
+}
+
 blockquote h4,
 .bquote h4,
 .bd-callout h4 {
@@ -171,7 +175,8 @@ blockquote i {
   font-size: 0.875em;
   text-align: right !important;
   margin-top: 0.5em !important;
-  margin-bottom: -1rem;
+  /* margin-bottom: -.1rem; */
+  margin-bottom: -.5rem;
 }
 
 blockquote i::before {
