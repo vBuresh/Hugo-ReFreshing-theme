@@ -1,0 +1,19 @@
+{{- /*
+По умолчанию включает поддержку style="width: 18rem;" и auto
+Usage: `imgFloat "type" "imgFileName_one" "right"`
+*/ -}}
+{{ $imgFileName_one := .Get 0 }}
+{{ $imgFloat := .Get 1 }}
+{{ $imgWidth := .Get 2 }}
+{{ $imgTxt_One := .Get 3 }}
+
+<div class="{{ $imgFloat }}" style="width: {{$imgWidth}}%;">
+  <figure>
+    <a href="{{ $imgFileName_one }}">
+      <img src="{{ $imgFileName_one }}" class="card-img-top" alt="...">
+    </a>
+    <figcaption class="figure-caption mt-1">
+      {{ $imgTxt_One }}
+    </figcaption>
+  </figure>
+</div>
