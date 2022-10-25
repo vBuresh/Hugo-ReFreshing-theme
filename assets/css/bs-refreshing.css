@@ -901,3 +901,8 @@ pre,
   margin-left: 0.15rem;
   margin-right: 0.15rem;
 }
+
+.tags-sidebar {
+  position: sticky; 
+  top: 3.5em;
+}
