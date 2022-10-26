@@ -21,7 +21,9 @@
     {{- partial "darkmode-js-subbody.html" . -}}
     {{- end }}
     <div class="d-flex p-3 mx-auto flex-column">
+      {{- partial "navbar/nav-btn-tags.html" . -}}
       {{- partial "navbar/navbaroff.html" . -}}
+
       <div id="content" class="container cover-container pb-5">
         <main>{{- block "main" . }}
           {{- end }}</main>
