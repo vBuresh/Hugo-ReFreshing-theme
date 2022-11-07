@@ -10,7 +10,7 @@
   --mainColour: var(--rfi-color);
   --rfi-darkHugoBlue: #132029;
   --rfi-veryDarkBlue: #001a33;
-  --rfi-darkHugo: #0a1922;
+  --rfi-darkHugo: #0a1922; 
   --rfi-verydarkHugo: #040b0e;
   --rfi-blackDakmode: #111;
   --rfi-color: #33ccff;
@@ -48,7 +48,6 @@
 }
 
 /* Typography */
-/*TODO change acsient color 205-211 */
 a {
   color: var(--bs-primary);
   /* color: var(--rfi-aLinks); */
@@ -904,5 +903,45 @@ pre,
 
 .tags-sidebar {
   position: sticky; 
-  top: 3.5em;
+  top: 2.3em;
 }
+
+.fri-footer .nav-link,
+.fri-footer {
+  color: var(--bs-gray-500);
+  font-size: .9em;
+  background-color: var(--rfi-verydarkHugo)
+}
+
+.fri-footer .nav {
+  --bs-nav-link-padding-x: 0;
+  --bs-nav-link-padding-y: .1em;
+  --bs-nav-link-font-weight: ;
+  --bs-nav-link-color: var(--bs-link-color);
+  --bs-nav-link-hover-color: var(--bs-link-hover-color);
+  --bs-nav-link-disabled-color: #6c757d;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+/* .fri-footer a svg {
+   fill: var(--mainColour);
+   text-decoration: none;
+} */
+
+.fri-footer .partials-img {
+   fill: var(--bs-gray-600);
+   text-decoration: none;
+}
+
+.fri-footer .nav a {
+    color: var(--bs-gray-600);
+    text-decoration: none;
+ }
+
+ .fri-footer a:hover {
+    text-decoration: underline;
+ }
