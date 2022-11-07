@@ -1,4 +1,4 @@
- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+ <svg class="partials-img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
    fill="{{ .fill }}" width="{{ .width }}" height="{{ .height }}" viewBox="0 0 832 384" aria-label="External Link">
   <path d="M0 0h832v384H0z" fill="#0e2426"/>
   <circle stroke="#00D1B2" fill="#002727" r="130" cy="192" cx="416" stroke-width="2"/>
