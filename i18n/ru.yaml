@@ -35,7 +35,9 @@
 - id: website
   translation: 'Hugo ReFreshing'
 - id: credits
-  translation: 'Благодарим'
+  translation: 'Благодарности'
+- id: info
+  translation: 'Информация'
 - id: copyright
   translation: 'Права и лицензии'
 - id: contacts
@@ -52,5 +54,7 @@
   translation: 'Предыдущий'
 - id: slideNext
   translation: 'Следующий'
+- id: backtoTop
+  translation: 'К началу страницы'
 # - id: darkMode
 #   translation: "Цветовая схема: светлая / тёмная"

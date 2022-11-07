@@ -36,6 +36,8 @@
   translation: 'Website'
 - id: credits
   translation: 'Credits'
+- id: info
+  translation: 'Info'
 - id: copyright
   translation: 'Copyright'
 - id: contacts
@@ -52,5 +54,7 @@
   translation: 'Previous'
 - id: slideNext
   translation: 'Next'
+- id: backtoTop
+  translation: 'Back to top of page'
 # - id: darkMode
 #   translation: "Color Schemes: light / dark"
