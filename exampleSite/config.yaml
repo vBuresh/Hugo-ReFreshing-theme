@@ -1,6 +1,12 @@
+# Configure Hugo:       https://gohugo.io/getting-started/configuration/#configuration-file
 title: ReFreshing
-baseURL: https://mediabank.cybmir.ru
+baseURL: https://cybmir.ru
 theme: Hugo-ReFreshing
+
+taxonomies:
+  category: categories
+  tag: tags
+
 languageCode: ru
 DefaultContentLanguage: ru
 disableLanguages: en
@@ -20,12 +26,13 @@ markup:
   tableOfContents:
     startLevel: 2
     endLevel: 4
+    ordered: false
 
 # Syntax Highlighting
 pygmentsUseClasses: true
 
 enableRobotsTXT: false
-publishDir: @_public
+publishDir: _public
 
 # применяются относительные ссылки. Тo turn relative URLs into absolute use
 # canonifyURLs:         true.
@@ -38,13 +45,13 @@ params:
   #title:                lux
   description: A one-page template for building simple and beautiful home pages.
   # for meta
-  summary: Very nice template
-  authors: '@wburesh'
+  summary: With a very nice Hugo-ReFreshing theme
+  authors: "@wburesh"
   site_version: a4.0
   favicon: /images/favicon.svg
 
   # Баннер для карточек
-  defaultImage: /images/default-card_img-cybmir.svg
+  defaultImage: /images/plaseholder-rfi.svg
   # Оptions
 
   darkMode: true
@@ -75,7 +82,7 @@ params:
     # this options let you specify the text of the link to the homepage
     # linkText:         "Homepage"
     # option to specify the title in the homepage
-    title: Cyber-МїРъ
+    title: ReFreshing
     subtitle: Only one-page template for building simple and beautiful home pages.
     # option to specify the subtitle in the homepage
     summary: Download, edit the text, and add your own fullscreen background photo to make it your own.
@@ -99,5 +106,53 @@ languages:
         subtitle: '— Золотая оправа для сайта'
         summary: 'Отредактируйте текст, наполнив его короткой информацией о своем сайте. Чтобы оживить главную страницу добавьте свою собственную полноэкранную фоновую фотографию, чтобы сделать ее своей собственной.'
       footer:
-        logo: /images/logoRFI.svg
-        title: 'Hugo-ReFreshing Theme ©'
+        # option to specify the logo in the footer
+        # the starting folder is configure in "assetDir" of this file
+        logo: "/images/logoRFI.svg"
+        title: "ReFreshingh — "
+        # TODO См. https://gohugo.io/functions/safehtml/#prose
+        # copyright: © 2015 Jane Doe.  <a href="https://creativecommons.org/licenses/by/4.0/">Some rights reserved</a>.
+        # {{ .Site.Copyright | safeHTML }} in a template would then output
+        # option to specify the copyright in the footer
+        # license: CC BY-NC-ND 4.0
+        # license:
+        #   link: by-sa/4.0
+        #   title: CC BY-SA 4.0 
+        # contactAdr: userAdr
+        # contactTel: +7-905-702-00-00
+        # email:
+        #   link: username@user.com
+        #   title: e-mail
+        # **uncomment** the below lines to show in footer
+        # option to specify your telegram username in the footer; 
+        # telegram: 
+        #    link: userID
+        #    title: Telegram    
+        # option to specify your VK username in the footer; 
+        # VK: 
+        #   link: userID
+        #   title: VK
+        # **uncomment** the below lines to show in footer
+        github: 
+          link: vBuresh/Hugo-ReFreshing
+          title: Github
+        # option to specify your gitlab account in the footer; 
+        # gitlab: 
+        #   link: username
+        #   title: Gitlab
+        # option to specify your WhatsApp username in the footer; 
+        # whatsapp: 
+        #   link: userTel
+        #   title: WhatsApp
+        # option to specify your facebook account in the footer; 
+        # facebook: 
+        #   link: your.username
+        #   title: Facebook
+        # option to specify your twitter username in the footer; 
+        # twitter: 
+        #    link: username
+        #    title: Twitter
+        # option to specify your instagram username in the footer; 
+        # instagram: 
+        #    link: username
+        #    title: Instagram
