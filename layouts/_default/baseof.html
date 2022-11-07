@@ -1,26 +1,28 @@
 <!doctype>
 <html lang="{{ .Site.LanguageCode }}">
 
-  <head>
-    {{- partial "meta.html" . -}}
+<head>
+  {{- partial "meta.html" . -}}
 
-    <title>{{- block "title" . -}}
-      {{ if .IsHome }}{{ .Site.Title | markdownify }} · {{ .Site.Params.summary | markdownify }}{{ else }}{{ .Title | markdownify }} · {{ .Site.Title | markdownify }} v{{ .Site.Params.site_version }}{{ end }}
-      {{- end -}}</title>
+  <title>{{- block "title" . -}}
+    {{ if .IsHome }}{{ .Site.Title | markdownify }} · {{ .Site.Params.summary | markdownify }}{{ else }}{{ .Title |
+    markdownify }} · {{ .Site.Title | markdownify }} v{{ .Site.Params.site_version }}{{ end }}
+    {{- end -}}</title>
 
-    {{- partial "stylesheets.html" . -}}
-    {{- partial "favicons.html" . -}}
-    {{/* {{- partial "verbox.html" . -}} */}}
+  {{- partial "stylesheets.html" . -}}
+  {{- partial "favicons.html" . -}}
+  {{- partial "yaMetrics.html" . -}}
 
-  </head>
+</head>
 
-  {{ block "body_override" . }}
+{{ block "body_override" . }}
 
-  <body>{{ end }}
-    {{ if .Site.Params.darkMode -}}
-    {{- partial "darkmode-js-subbody.html" . -}}
-    {{- end }}
-    <div class="d-flex p-3 mx-auto flex-column">
+<body>{{ end }}
+  {{ if .Site.Params.darkMode -}}
+  {{- partial "darkmode-js-subbody.html" . -}}
+  {{- end }}
+  <div class="d-flex mx-auto flex-column">
+    <div class="px-3">
       {{- partial "navbar/nav-btn-tags.html" . -}}
       {{- partial "navbar/navbaroff.html" . -}}
 
@@ -28,10 +30,11 @@
         <main>{{- block "main" . }}
           {{- end }}</main>
       </div>
-      {{- partial "footer.html" . -}}
-      {{- partial "navbar/navbaroffcanvas.html" . -}}
-      {{- partial "scripts.html" . -}}
     </div>
-  </body>
+    {{- partial "footer.html" . -}}
+    {{- partial "navbar/navbaroffcanvas.html" . -}}
+    {{- partial "scripts.html" . -}}
+  </div>
+</body>
 
 </html>
