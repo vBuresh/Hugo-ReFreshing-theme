@@ -12,7 +12,7 @@
       {{ i18n "credits" }}
       {{- end -}}
     </a>
-  {{- with .Site.GetPage "/cmir/law/rights/about-rights" -}}
+  {{- with .Site.GetPage "/about/copyright" -}}
     <a class="nav-link" href="{{- .RelPermalink -}}">
       {{ partial "icons/rfi-copyright.svg" (dict "width" "14" "height" "14") }}
       {{ i18n "copyright" }}

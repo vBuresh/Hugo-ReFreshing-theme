@@ -12,19 +12,17 @@
     <div class="row flex-nowrap justify-content-between">
       <div class="col">
         <ul class="list-unstyled">
-          <li class="fs-6">
+          <li class="footer-logo fs-6">
             <a aria-current="page" href="{{ " /" | relURL }}">
-              {{- if .Site.Params.Footer.logo -}}
-              {{- $out_fo := "footer-brand.svg" -}}
-              {{- $img_n := .Site.Params.Footer.logo -}}
-              {{- $type := lower (substr $img_n (sub (len $img_n) 3) (len $img_n)) -}}
-              {{- $img := resources.Get $img_n -}}
-              {{- if eq $type "svg" -}}
-              {{- $img = $img | resources.ExecuteAsTemplate $out_fo . }}
-              {{- end -}}
-              <img src="{{- $img.Permalink | relURL -}}" width="36" height="36" class="d-inline-flex align-top me-2"
-                alt="brand">
-              {{- end -}}
+                {{- $out_fo  := "footer.svg" -}}
+                {{- $img_n   := .Site.Params.footer.logo -}}
+                {{- $home    := .Site.Params.homepage.linkPosition -}}
+                {{- $type    := lower (substr $img_n (sub (len $img_n) 3) (len $img_n)) -}}
+                {{- $img     := resources.Get $img_n -}}
+                {{- if eq $type "svg" -}}
+                  {{- $img    = $img | resources.ExecuteAsTemplate $out_fo . }}
+                {{- end -}}
+                <img src="{{- $img.Permalink | relURL -}}" alt="">
             </a>
           </li>
           <li class="fs-6 pt-2">{{- if .Site.Params.Footer.title -}}
@@ -51,12 +49,7 @@
   </div>
   <div class="mt-4 border-top border-dark text-end">
     <div class="container">
-    <p class="pt-2 text-muted fst-italic">
-      Дизайн и разработка — Студия&nbsp;<a href="https://artelenlux.ru">
-        <span class="text-danger "><sup>
-          art^</sup></span>ББ</a>.
-        Тема: Hugo-ReFreshing © 2021—{{ now.Format "2006" }}
-        </p>
+      {{- partial "footer-info-dev.html" . -}}
   </div>
   </div>
 </footer>
