@@ -927,6 +927,10 @@ pre,
   list-style: none;
 }
 
+.footer-logo img {
+      height: 40px;
+}
+
 /* .fri-footer a svg {
    fill: var(--mainColour);
    text-decoration: none;
