@@ -7,10 +7,13 @@
   --bs-font-monospace: 'Fira Code VF', SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;
   /*rfi Theme variables */
+
   --mainColour: var(--rfi-color);
-  --rfi-darkHugoBlue: #132029;
   --rfi-veryDarkBlue: #0b0b0d;
-  --rfi-mostlyBlack_blue: #17171b;
+  --rfi-veryDarkBlackBlue1: #1d2026;
+  --rfi-veryDarkBlackBlue2: #121417;
+  --rfi-VeryDarkGrayishBlue: #282c34;
+  --rfi-darkHugoBlue: #132029;
   --rfi-darkHugo: #0a1922; 
   --rfi-verydarkHugo: #040b0e;
   --rfi-blackDakmode: #111;
@@ -907,11 +910,14 @@ pre,
   top: 2.3em;
 }
 
+.fri-footer {
+  background-color: var(--rfi-VeryDarkGrayishBlue);
+}
+
 .fri-footer .nav-link,
 .fri-footer {
   color: var(--bs-gray-200);
   font-size: 1em;
-  background-color: var(--rfi-mostlyBlack_blue);
 }
 
 .fri-footer .nav {
