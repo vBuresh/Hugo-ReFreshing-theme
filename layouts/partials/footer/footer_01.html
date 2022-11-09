@@ -1,0 +1,34 @@
+<footer class="mt-auto py-3 border-top">
+  <div class="container">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-6">
+        <a aria-current="page" href="{{ "#" | relURL }}">
+          {{- $out_fo  := "footer.svg" -}}
+          {{- $img_n   := .Site.Params.footer.logo -}}
+          {{- $home    := .Site.Params.homepage.linkPosition -}}
+          {{- $type    := lower (substr $img_n (sub (len $img_n) 3) (len $img_n)) -}}
+          {{- $img     := resources.Get $img_n -}}
+          {{- if eq $type "svg" -}}
+            {{- $img    = $img | resources.ExecuteAsTemplate $out_fo . }}
+          {{- end -}}
+          <img src="{{- $img.Permalink | relURL -}}" class="float-start mt-1 me-2" alt="">
+      </a>
+        {{- if .Site.Params.Footer.title -}}
+        {{ .Site.Params.Footer.title }}
+        {{ now.Format "2006" }}
+        {{- end -}}
+      </div>
+      <div class="col-6 d-flex justify-content-end align-items-center">
+        <a class="text-muted pe-5" href="https://artelenlux.ru">
+        <sup><span class="text-danger">
+          art</span></sup>BB </a>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="{{ .Site.Params.mainColour }}" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z" />
+              <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+            </svg>
+          </a>
+      </div>
+    </div>
+  </div>
+</footer>

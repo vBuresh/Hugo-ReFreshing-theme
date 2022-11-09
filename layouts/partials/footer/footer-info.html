@@ -1,0 +1,17 @@
+<h5>{{ i18n "info" }}</h5>
+<!-- i18n "" -->
+<nav class="nav flex-column">
+  {{- with .Site.GetPage "/credits" -}}
+    <a class="nav-link" href="{{- .RelPermalink -}}">
+      {{ partial "icons/rfi-handshake.svg" (dict "width" "16" "height" "16") }}
+      {{ i18n "credits" }}
+      {{- end -}}
+    </a>
+  {{- with .Site.GetPage "/copyright" -}}
+    <a class="nav-link" href="{{- .RelPermalink -}}">
+      {{ partial "icons/rfi-copyright.svg" (dict "width" "16" "height" "16") }}
+      {{ i18n "copyright" }}
+    </a>
+      {{- end -}}
+    </nav> 
+  

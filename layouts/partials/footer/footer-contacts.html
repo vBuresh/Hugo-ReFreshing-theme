@@ -1,0 +1,120 @@
+<h4 class="fs-5 mb-1">Контакты</h4>
+{{ if (or (or (or (or (or (or (or (or (or
+(isset .Site.Params.footer "telegram"))
+(isset .Site.Params.footer "vk"))
+(isset .Site.Params.footer "email"))
+(isset .Site.Params.footer "github"))
+(isset .Site.Params.footer "gitlab"))
+(isset .Site.Params.footer "whatsapp"))
+(isset .Site.Params.footer "facebook"))
+(isset .Site.Params.footer "twitter"))
+(isset .Site.Params.footer "instagram"))
+}}
+<nav class="nav flex-column">
+  {{ if isset .Site.Params.footer.telegram "link" }}
+  <a class="nav-link" href="https://t.me/{{ .Site.Params.footer.telegram.link }}" target="_blank">
+    {{ partial "icons/bi-telegram.svg" (dict "width" "16" "height" "16") }}
+    {{ if isset .Site.Params.footer.telegram "title" }}
+    {{ .Site.Params.footer.telegram.title }}
+    {{ else }}
+    Telegram
+    {{ end }}
+  </a>
+  {{ end }}
+  {{ if isset .Site.Params.footer.vk "link" }}
+  <a class="nav-link" href="https://vk.com/{{ .Site.Params.footer.vk.link }}" target="_blank">
+    {{ partial "icons/rfi-vk.svg" (dict "width" "16" "height" "16") }}
+    {{ if isset .Site.Params.footer.vk "title" }}
+    {{ .Site.Params.footer.vk.title }}
+    {{ else }}
+    VK
+    {{ end }}
+  </a>
+  {{ end }}
+  {{ if isset .Site.Params.footer.github "link" }}
+  <a class="nav-link" href="https://github.com/{{ .Site.Params.footer.github.link }}" target="_blank">
+    {{ partial "icons/bi-github.svg" (dict "width" "17" "height" "17") }}
+    {{ if isset .Site.Params.footer.github "title" }}
+    {{ .Site.Params.footer.github.title }}
+    {{ else }}
+    Github
+    {{ end }}
+  </a>
+  {{ end }}
+  {{ if isset .Site.Params.footer.email "link" }}
+  <a href="mailto:{{ .Site.Params.footer.email.link }}" target="_blank">
+    {{ partial "icons/rfi-email.svg" (dict "width" "18" "height" "18") }}
+    {{ if isset .Site.Params.footer.email "title" }}
+    {{ .Site.Params.footer.email.title }}
+    {{ else }}
+    Email
+    {{ end }}
+  </a>
+  {{ end }}
+  {{/*  {{ if isset .Site.Params.footer.whatsapp "link" }}
+  <a href="https://wa.me/{{ .Site.Params.footer.whatsapp.link }}" target="_blank">
+    {{ partial "icons/bi-whatsapp.svg" (dict "width" "16" "height" "16") }}
+    {{ if isset .Site.Params.footer.whatsapp "title" }}
+    {{ .Site.Params.footer.whatsapp.title }}
+    {{ else }}
+    WhatsApp
+    {{ end }}
+  </a>
+  {{ end }}
+  {{ if isset .Site.Params.footer.facebook "link" }}
+  <a href="https://facebook.com/{{ .Site.Params.footer.facebook.link }}" target="_blank">
+    {{ partial "icons/bi-facebook.svg" (dict "width" "16" "height" "16") }}
+    {{ if isset .Site.Params.footer.facebook "title" }}
+    {{ .Site.Params.footer.facebook.title }}
+    {{ else }}
+    Facebook
+    {{ end }}
+  </a>
+  {{ end }}
+  {{ if isset .Site.Params.footer.twitter "link" }}
+  <li>
+    <a href="https://twitter.com/{{ .Site.Params.footer.twitter.link }}" target="_blank">
+      {{ partial "icons/bi-twitter.svg" (dict "width" "16" "height" "16") }}
+      {{ if isset .Site.Params.footer.twitter "title" }}
+        {{ .Site.Params.footer.twitter.title }}
+      {{ else }}
+        Twitter
+      {{ end }}
+    </a>
+  </li>
+  {{ end }}       
+  {{ if isset .Site.Params.footer.instagram "link" }}
+  <li>
+    <a href="https://instagram.com/{{ .Site.Params.footer.instagram.link }}" target="_blank">
+      {{ partial "icons/bi-instagram.svg" (dict "width" "16" "height" "16") }}
+      {{ if isset .Site.Params.footer.instagram "title" }}
+        {{ .Site.Params.footer.instagram.title }}
+      {{ else }}
+        Instagram
+      {{ end }}
+    </a>
+  </li>
+  {{ end }}
+  {{ if isset .Site.Params.footer.gitlab "link" }}
+  <li>
+    <a href="https://gitlab.com/{{ .Site.Params.footer.gitlab.link }}" target="_blank">
+      {{ partial "icons/rfi-gitlab.svg" (dict "width" "16" "height" "16") }}
+      {{ if isset .Site.Params.footer.gitlab "title" }}
+      {{ .Site.Params.footer.gitlab.title }}
+      {{ else }}
+      Gitlab
+      {{ end }}
+    </a>
+  </li>
+  {{ end }}
+</nav>
+<br>
+{{ if .Site.Params.footer.contactTel }}
+Телефон
+<br>
+<a class="nav-link" href="tel:{{ .Site.Params.footer.contactTel }}">
+  {{ partial "icons/bi-telephone.svg" (dict "width" "16" "height" "16") }}
+  {{ .Site.Params.footer.contactTel }}
+  {{- end -}}
+</a> */}}
+{{- end -}} 

@@ -1,0 +1,27 @@
+<div class="text-muted fst-italic">
+  <nav class="nav flex-column">
+    {{ if isset .Site.Params.footer.license "link" }}
+    <a class="nav-link" href="https://creativecommons.org/licenses/{{ .Site.Params.footer.license.link }}"
+      target="_blank">
+      Материалы сайта доступны по лицензии:
+      {{/*  {{ partial "svg/cc-nc-sa.svg" (dict "width" "120" "height" "42") }} <br>  */}}
+      {{ if isset .Site.Params.footer.license "title" }}
+      {{ .Site.Params.footer.license.title }}
+      {{ else }}
+      Creative Commons
+      {{ end }}
+    </a>
+  </nav>
+  {{ end }}
+  {{/* <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+    <img alt="Лицензия Creative Commons" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
+  </a>
+  <br>
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"> CC BY-NC-ND 4.0</a>
+  <br /><br />
+  */}}
+  {{/* <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Лицензия Creative Commons"
+      style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /><br />CC BY-SA </a> */}}
+  {{/* <br /><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+    «Attribution-ShareAlike» («Атрибуция-СохранениеУсловий») 4.0 Всемирная</a>. */}}
+</div>
