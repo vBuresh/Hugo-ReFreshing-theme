@@ -1,0 +1,63 @@
+<footer class="fri-footer">
+  <a href="#">
+    <svg class="float-end mt-1" xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+    fill="{{ .Site.Params.mainColour }}" viewBox="0 0 16 16">
+    <path
+    d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z" />
+    <path fill="#33ccff"
+    d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+  </svg>
+</a>
+  <div class="container py-4">
+    <div class="row flex-nowrap justify-content-between">
+      <div class="col">
+        <ul class="list-unstyled">
+          <li class="footer-logo fs-6">
+            <a aria-current="page" href="{{ "#" | relURL }}">
+                {{- $out_fo  := "footer.svg" -}}
+                {{- $img_n   := .Site.Params.footer.logo -}}
+                {{- $home    := .Site.Params.homepage.linkPosition -}}
+                {{- $type    := lower (substr $img_n (sub (len $img_n) 3) (len $img_n)) -}}
+                {{- $img     := resources.Get $img_n -}}
+                {{- if eq $type "svg" -}}
+                  {{- $img    = $img | resources.ExecuteAsTemplate $out_fo . }}
+                {{- end -}}
+                <img src="{{- $img.Permalink | relURL -}}" class="float-start mt-1 me-2" alt="">
+            </a>
+          </li>
+          <li class="fs-5 pt-2">{{- if .Site.Params.Footer.title -}}
+            {{ .Site.Params.Footer.title }}
+            {{/*  {{ now.Format "2006" }}  */}}
+            {{- end -}}
+          </li>
+          <li class="mt-4">
+            {{- with .Site.GetPage "/about/index" -}}
+            <a href="{{- .RelPermalink -}}">
+              {{ partial "icons/rfi-tags-check.svg" (dict "width" "16" "height" "16") }} 
+             {{ i18n "aboutProject" }}
+             {{- end -}}
+            </a>
+          </li>
+          <li class="mt-2">
+            {{- partial "license.html" . -}}
+          </li>
+        </ul>
+      </div>
+      <div class="col mt-2">
+        {{- partial "footer/footer-toc.html" . -}}
+      </div>
+      <div class="col mt-2">
+        {{- partial "footer/footer-contacts.html" . -}}
+        </nav>
+      </div>
+      {{/*  <div class="col">
+        {{- partial "footer/footer-info.html" . -}}
+      </div>  */}}
+    </div>
+  </div>
+  <div class="mt-4 border-top border-dark text-end">
+    <div class="container">
+      {{- partial "footer/footer-info-dev.html" . -}}
+  </div>
+  </div>
+</footer>
