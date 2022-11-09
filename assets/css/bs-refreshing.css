@@ -9,7 +9,8 @@
   /*rfi Theme variables */
   --mainColour: var(--rfi-color);
   --rfi-darkHugoBlue: #132029;
-  --rfi-veryDarkBlue: #001a33;
+  --rfi-veryDarkBlue: #0b0b0d;
+  --rfi-mostlyBlack_blue: #17171b;
   --rfi-darkHugo: #0a1922; 
   --rfi-verydarkHugo: #040b0e;
   --rfi-blackDakmode: #111;
@@ -908,14 +909,14 @@ pre,
 
 .fri-footer .nav-link,
 .fri-footer {
-  color: var(--bs-gray-500);
-  font-size: .9em;
-  background-color: var(--rfi-verydarkHugo)
+  color: var(--bs-gray-200);
+  font-size: 1em;
+  background-color: var(--rfi-mostlyBlack_blue);
 }
 
 .fri-footer .nav {
   --bs-nav-link-padding-x: 0;
-  --bs-nav-link-padding-y: .1em;
+  --bs-nav-link-padding-y: .25em;
   --bs-nav-link-font-weight: ;
   --bs-nav-link-color: var(--bs-link-color);
   --bs-nav-link-hover-color: var(--bs-link-hover-color);
@@ -928,7 +929,15 @@ pre,
 }
 
 .footer-logo img {
-      height: 40px;
+  height: 22px;
+  float: left;
+  margin-right: .35rem ;
+}
+
+.footer-logo-title {
+  color: var(--mainColour);
+  font-size: 1.2rem;
+  font-weight: bolder;
 }
 
 /* .fri-footer a svg {
@@ -938,11 +947,12 @@ pre,
 
 .fri-footer .partials-img {
    fill: var(--bs-gray-600);
+   margin-right: .25em;
    text-decoration: none;
 }
 
 .fri-footer .nav a {
-    color: var(--bs-gray-600);
+    color: var(--bs-gray-500);
     text-decoration: none;
  }
 
