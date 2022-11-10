@@ -907,7 +907,7 @@ pre,
 
 .tags-sidebar {
   position: sticky; 
-  top: 2.3em;
+  top: 2.5em;
 }
 
 .fri-footer {
@@ -936,7 +936,6 @@ pre,
 
 .footer-logo img {
   height: 22px;
-  float: left;
   margin-right: .35rem ;
 }
 
