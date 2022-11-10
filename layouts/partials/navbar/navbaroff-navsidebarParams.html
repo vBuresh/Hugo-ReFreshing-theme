@@ -1,0 +1,12 @@
+<nav class="nav nav-masthead justify-content-center float-md-end">
+  {{ if isset .Site.Params.navsidebar "link" }}
+  <a class="nav-link" href="/{{ .Site.Params.navsidebar.link }}">
+    {{/*  {{ partial "icons/rfi-tags-check.svg" (dict "width" "17" "height" "17") }}  */}}
+    {{ if isset .Site.Params.navsidebar "title" }}
+    {{ .Site.Params.navsidebar.title }}
+    {{ else }}
+    {{ i18n "tags" }}
+    {{ end }}
+  </a>
+  {{ end }}
+</nav>

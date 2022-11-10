@@ -1,6 +1,6 @@
 <header class="mb-auto">
 <div class="row flex-nowrap justify-content-between align-items-center rfi-navbaroff">
-    <div class="col-6">
+    <div class="col">
     <a class="navbar-brand" aria-current="page" href="{{ "/" | relURL }}">
       {{- if .Site.Params.logo -}}
       {{- $out_fo  := "brand.svg" -}}
@@ -19,8 +19,8 @@
       {{- end -}}
     </a>
   </div>
-<div class="col-6 d-flex justify-content-end align-items-center">
-  {{- partial "navbar/navbaroff-tags.html" . -}}
+<div class="col d-flex justify-content-end align-items-center me-4">
+  {{- partial "navbar/navbaroff-navsidebarParams.html" . -}}
 </div>
 </div>
 <div class="rfi-navbaroff">
