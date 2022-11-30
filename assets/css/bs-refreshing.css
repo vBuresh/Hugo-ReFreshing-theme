@@ -10,11 +10,12 @@
 
   --mainColour: var(--rfi-color);
   --rfi-veryDarkBlue: #0b0b0d;
-  --rfi-veryDarkBlackBlue1: #1d2026;
-  --rfi-veryDarkBlackBlue2: #121417;
-  --rfi-VeryDarkGrayishBlue: #282c34;
+  /* --rfi-veryDarkBlackBlue1: #1d2026; 
+  --rfi-veryDarkBlackBlue2: #121417; */
+  --rfi-VeryDarkBlueFooter: #102736;
   --rfi-darkHugoBlue: #132029;
-  --rfi-darkHugo: #0a1922; 
+  --rfi-darkHugo: #0a1922;
+  --rfi-logoDarkText: #215271;
   --rfi-verydarkHugo: #040b0e;
   --rfi-blackDakmode: #111;
   --rfi-color: #33ccff;
@@ -854,7 +855,7 @@ pre,
 
 .nav-scroller {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   height: 2.75rem;
   overflow-y: hidden;
 }
@@ -905,13 +906,15 @@ pre,
   margin-right: 0.15rem;
 }
 
-.tags-sidebar {
-  position: sticky; 
-  top: 2.5em;
+.sidebar-floating-btn {
+  position:fixed;
+  right: 10px;
+  top: 1.6em;
+  z-index: 178;
 }
 
 .fri-footer {
-  background-color: var(--rfi-VeryDarkGrayishBlue);
+  background-color: var(--rfi-VeryDarkBlueFooter);
 }
 
 .fri-footer .nav-link,
@@ -935,7 +938,7 @@ pre,
 }
 
 .footer-logo img {
-  height: 22px;
+  height: 42px;
   margin-right: .35rem ;
 }
 
@@ -964,3 +967,9 @@ pre,
  .fri-footer a:hover {
     text-decoration: underline;
  }
+
+.rfi-gallerylist .card-img,
+.rfi-gallerylist .card-img-top {
+  border-top-left-radius:0;
+  border-top-right-radius:0;
+}
