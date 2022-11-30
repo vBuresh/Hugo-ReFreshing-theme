@@ -1,28 +1,30 @@
 <div class="col">
-<div class="card border-0">
-{{/* {{ partial "svg/plaseholder-rfi.svg" (dict "class" "card-img-top") }}   */}}
+  <div class="card text-bg-light border-0 h-100">
+    {{/* {{ partial "svg/plaseholder-rfi.svg" (dict "class" "card-img-top") }} */}}
     {{- partial "topBanner.html" . -}}
-  <div class="card-body">
-<!-- NOTE: текст обрезается автоматически:
+    <div class="card-body">
+      <!-- NOTE: текст обрезается автоматически:
         [text-truncate](https://gohugo.io/functions/truncate) -->
-    <h5 class="card-title">
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-    </h5>
-<h6 class="card-subtitle mb-2 text-muted">
-{{ if (isset .Page.Params "subtitle") }}
-      {{ .Page.Params.subtitle }}
-</h6>
-{{ end }}
-    <p class="card-text">
-{{ if (isset .Page.Params "summary") }}
-    {{ .Summary | truncate 68 }}
-{{ else }}
-   {{ .Description | truncate 68 }}
-{{ end }}
-   </p>
-    <div class="text-end mt-2">
+      <a href="{{ .Permalink }}">
+        <h5 class="card-title">
+          {{ .Title }}
+        </h5>
+      </a>
+      <h6 class="card-subtitle mb-2 text-muted">
+        {{ if (isset .Page.Params "subtitle") }}
+        {{ .Page.Params.subtitle }}
+      </h6>
+      {{ end }}
+      <p class="card-text">
+        {{ if (isset .Page.Params "summary") }}
+        {{ .Summary | truncate 48 }}
+        {{ else }}
+        {{ .Description | truncate 48 }}
+        {{ end }}
+      </p>
+      {{/* <div class="text-end mt-2">
         <a class="btn btn-light btn-xs" href="{{ .Permalink }}" role="button">{{ i18n "moreDetails" }}</a>
+      </div> */}}
     </div>
   </div>
-</div>
 </div>

@@ -22,8 +22,8 @@
   {{- partial "darkmode-js-subbody.html" . -}}
   {{- end }}
   <div class="d-flex mx-auto flex-column">
-    <div class="px-3">
-      {{- partial "navbar/nav-btn-tags.html" . -}}
+    <div class="px-2 pt-2">
+      {{- partial "navbar/sidebar-floating-btn.html" . -}}
       {{- partial "navbar/navbaroff.html" . -}}
 
       <div id="content" class="container cover-container pb-5">
@@ -32,7 +32,7 @@
       </div>
     </div>
     {{- partial "footer.html" . -}}
-    {{- partial "navbar/navbaroffcanvas.html" . -}}
+    {{- partial "navbar/sidebar-offconvas.html" . -}}
     {{- partial "scripts.html" . -}}
   </div>
 </body>

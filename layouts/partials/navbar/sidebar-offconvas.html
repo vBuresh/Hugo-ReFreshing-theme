@@ -1,0 +1,14 @@
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasNavbarRFi" aria-labelledby="offcanvasNavbarRFiLabel">
+
+  <div class="offcanvas-header border-bottom border-secondary">
+    <h5 class="offcanvas-title text-muted" id="offcanvasNavbarRFiLabel"> 
+      {{ i18n "theme" }}
+    </h5>
+    {{- partial "dark-switch.html" . -}}
+    {{- partial "navbar/navbaroff-btn-x.html" . -}}
+  </div>
+  <div class="offcanvas-body pt-0">
+    <!-- setup -->
+    {{/*  {{- partial "tags-newPublics.html" . -}}  */}}
+    {{- partial "tags-allTags.html" . -}}
+  </div>
