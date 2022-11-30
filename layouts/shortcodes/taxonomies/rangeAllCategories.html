@@ -1,0 +1,5 @@
+<ol>
+    {{ range .Site.Taxonomies.categories }}
+    <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> <sup class="text-danger">{{ .Count }}</sup></li>
+  {{ end }}
+</ol>

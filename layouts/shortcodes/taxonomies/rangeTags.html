@@ -1,0 +1,5 @@
+<ul>
+  {{ range .Site.Taxonomies.tags.bootstrap }}
+      <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
+  {{ end }}
+</ul>

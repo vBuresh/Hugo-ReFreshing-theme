@@ -1,0 +1,9 @@
+<ol>
+  {{ range .Site.Taxonomies.categories.живопись }}
+      <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
+  {{ end }}
+{{/*  не работает  
+  {{ range where .Site.Pages "Params.categories" "Front Matter" }}
+  <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
+  {{ end }}  */}}
+</ol>
