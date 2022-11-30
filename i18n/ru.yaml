@@ -1,5 +1,5 @@
-- id: cyberMiR
-  translation: 'cyberМїРъ'
+- id: theme           
+  translation: 'Тема: «Освежение»'
 - id: leaf
   translation: 'Листики'
 - id: author
@@ -56,5 +56,5 @@
   translation: 'Следующий'
 - id: backtoTop
   translation: 'К началу страницы'
-# - id: darkMode
-#   translation: "Цветовая схема: светлая / тёмная"
+- id: darkMode
+  translation: "ночь/день "
