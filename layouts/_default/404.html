@@ -1,8 +1,21 @@
 {{ define "body_override" }}
-
 <body class="d-flex flex-column min-vh-100">{{ end }}
   {{ define "main" }}
   <main class="my-auto p-5" id="content">
-    {{ .Content }}
+    <div class="text-center py-5">
+      <h1 class="display-1 fw-bolder">404 &smile;</h1>
+      {{/*  {{ i18n "FileNotFound" }}  */}}
+      <h2>File not found</h2>
+      {{ .Content }}
+    </div>
+    <h3 class="h4 text-start">
+      {{/*  {{ i18n "postsList" }}  */}}
+      Список всех публикаций
+      <small class="text-muted">&mdash;
+      {{/*  {{ i18n "CategoriesTags" }}  */}}
+      по категориям и тегам
+      </small>
+     </h3>
+    {{ partial "all-taxonomies.html" . }}
   </main>
   {{ end }}
