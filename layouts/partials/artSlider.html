@@ -4,33 +4,33 @@
       {{ with .Page.Resources.Match "images/*" }}
       <div class="carousel-item active">
         <img src="images/art-slide.webp" class="h-auto" alt="...">
-        </div>
-        {{ range . }}
-        {{/* отбор всех изображений images/* только из директории images w-auto*/}}
-        <div class="carousel-item">
-          <div class="text-center">
+      </div>
+      {{ range . }}
+      {{/* отбор всех изображений images/* только из директории images w-auto*/}}
+      <div class="carousel-item">
+        <div class="text-center">
           <img src="{{ .RelPermalink }}" class="h-auto" alt="...">
-          </div>
-          </div>
-          {{ end }}
-          </div>
-          {{ end }}
-          {{ if .Page.Params.topPageimgCaption }}
-          <figcaption class="figure-caption mt-1">
-            {{ .Page.Params.topPageimgCaption }}
-          </figcaption>
-          {{ end }}
-          <button class="carousel-control-prev" type="button" data-bs-target="#artSladerTop" data-bs-slide="prev">
-            <svg xmlns='http://www.w3.org/2000/svg' width="32" height="32" viewBox='0 0 16 16' fill="#ffcc33">
-              <path
-                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z">
-                <svg>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#artSladerTop" data-bs-slide="next">
-            <svg xmlns='http://www.w3.org/2000/svg' width="32" height="32" viewBox='0 0 16 16' fill="#ffcc33">
-              <path
-                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
-                <svg>
-                  </button>
-                  </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+    {{ if .Page.Params.topPageimgCaption }}
+    <figcaption class="figure-caption mt-1">
+      {{ .Page.Params.topPageimgCaption }}
+    </figcaption>
+    {{ end }}
+    <button class="carousel-control-prev" type="button" data-bs-target="#artSladerTop" data-bs-slide="prev">
+      <svg xmlns='http://www.w3.org/2000/svg' width="32" height="32" viewBox='0 0 16 16' fill="#ffcc33">
+        <path
+          d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z">
+          <svg>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#artSladerTop" data-bs-slide="next">
+      <svg xmlns='http://www.w3.org/2000/svg' width="32" height="32" viewBox='0 0 16 16' fill="#ffcc33">
+        <path
+          d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+          <svg>
+    </button>
+  </div>
 </section>
