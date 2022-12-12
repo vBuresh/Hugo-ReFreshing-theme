@@ -909,7 +909,7 @@ pre,
 .sidebar-floating-btn {
   position:fixed;
   right: 10px;
-  top: 1.6em;
+  top: 1.5em;
   z-index: 178;
 }
 
@@ -972,4 +972,8 @@ pre,
 .rfi-gallerylist .card-img-top {
   border-top-left-radius:0;
   border-top-right-radius:0;
+}
+
+.rfi-cardlists .card-body {
+  padding-top: .4125rem;
 }
