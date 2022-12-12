@@ -1,30 +1,22 @@
-<div class="col">
+<div class="col rfi-cardlists">
   <div class="card text-bg-light border-0 h-100">
-    {{/* {{ partial "svg/plaseholder-rfi.svg" (dict "class" "card-img-top") }} */}}
     {{- partial "topBanner.html" . -}}
     <div class="card-body">
-      <!-- NOTE: текст обрезается автоматически:
-        [text-truncate](https://gohugo.io/functions/truncate) -->
-      <a href="{{ .Permalink }}">
-        <h5 class="card-title">
+       <a href="{{ .Permalink }}">
+        <h5>
           {{ .Title }}
         </h5>
+        <h6 class="card-subtitle text-muted">
+          {{ if (isset .Page.Params "subtitle") }}
+          {{ .Page.Params.subtitle }}&#46;
+          {{ end }}
+          {{ if (isset .Page.Params "summary") }}
+          {{ .Summary | truncate 60 }}
+          {{ else }}
+          {{ .Description | truncate 60 }}
+          {{ end }}
+        </h6>
       </a>
-      <h6 class="card-subtitle mb-2 text-muted">
-        {{ if (isset .Page.Params "subtitle") }}
-        {{ .Page.Params.subtitle }}
-      </h6>
-      {{ end }}
-      <p class="card-text">
-        {{ if (isset .Page.Params "summary") }}
-        {{ .Summary | truncate 48 }}
-        {{ else }}
-        {{ .Description | truncate 48 }}
-        {{ end }}
-      </p>
-      {{/* <div class="text-end mt-2">
-        <a class="btn btn-light btn-xs" href="{{ .Permalink }}" role="button">{{ i18n "moreDetails" }}</a>
-      </div> */}}
     </div>
   </div>
 </div>
